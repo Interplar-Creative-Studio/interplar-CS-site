@@ -1,0 +1,169 @@
+$header-gradient-1: linear-gradient(314deg, rgba(255,255,255,1) 15.8%, rgba(255,255,255,1) 38%, rgba(255,75,28,1) 38.12%, rgba(255,75,28,1) 60.76%, rgba(6,255,255,1) 60.77%, rgba(6,255,255,1) 81.71%);
+$animation: all 1s ease;
+
+h1{
+  font-family:'BebasNeue-light',sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 5.6rem;
+  line-height: 5.6rem;
+  letter-spacing: 0.03em;
+  color: $white;
+  display: inline-block;
+  position: relative;
+  width: fit-content;
+  &:before{
+    content: attr(data-title);
+    filter: blur(10px);
+    background: $header-gradient-1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: inline-block;
+    position: absolute;
+    animation:header-blur 1s linear infinite ;
+  }
+}
+
+@keyframes header-blur{
+  0%{
+    opacity: 1;
+  }
+  25%{
+    opacity: 0.6;
+  }
+  50%{
+    opacity: 0.2;
+  }
+  75%{
+    opacity: 0.6;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+h2{
+  font-family:'Montserrat',sans-serif;
+  display: inline-block;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 0.05em;
+  color: $white;
+  width: fit-content;
+}
+
+p{
+  font-family:'Montserrat',sans-serif;
+  display: inline-block;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0;
+  color: $white;
+  width: fit-content;
+}
+
+.link{
+  font-family:'Montserrat',sans-serif;
+  display: inline-block;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  letter-spacing: 0;
+  color: $white;
+  text-decoration: none;
+  position: relative;
+  margin: 20px 0;
+  width: fit-content;
+  &:before{
+    position: absolute;
+    content: '';
+    background: $white;
+    height: 1px;
+    width: 0;
+    left: 0;
+    bottom: 2px;
+    transition: $animation;
+  }
+  &:hover{
+    color: $white;
+    &:before{
+      width: 100%;
+    }
+  }
+}
+
+.button-1,.button-2,.button-3{
+  display: inline-block;
+  background: $black;
+  border: 2px solid $white;
+  box-sizing: border-box;
+  padding: 26px calc(24px + 8px + 56px) 22px 24px;
+  position: relative;
+  transition: $animation;
+  width: fit-content;
+  p{
+    font-family:'BebasNeue-Regular', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    letter-spacing: 0.1em;
+    color: $white;
+    margin: 0;
+    transition: $animation;
+    text-transform: uppercase;
+  }
+  &:before{
+    position: absolute;
+    content: '';
+    background: $white;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 24px;
+    width: 56px;
+    height: 2px;
+    transition: $animation;
+  }
+  &:hover{
+    background: $white;
+    p{
+      color: $black;
+    }
+    &:before{
+      background: $black;
+      width: calc(100% - 48px);
+    }
+  }
+}
+
+.button-2{
+  border: none;
+  &:hover{
+    background: $black;
+    p{
+      color: $white;
+    }
+    &:before{
+      background: $white;
+    }
+  }
+}
+
+.button-3{
+  background: $white;
+  border: 2px solid $black;
+  p{
+    color: $black;
+  }
+  &:before{
+    background: $black;
+  }
+  &:hover{
+    background: $black;
+    p{
+      color: $white;
+    }
+    &:before{
+      background: $white;
+    }
+  }
+}
