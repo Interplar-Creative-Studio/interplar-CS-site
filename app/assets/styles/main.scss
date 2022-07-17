@@ -6,10 +6,11 @@
 @import 'utils/menu';
 @import 'utils/about-us';
 @import 'utils/our-cases';
-
+@import 'utils/direction';
+@import 'utils/how-we-work';
 
 :root {
   font-size: 10px;
   background: $black;
-  overflow: hidden;
+  overflow-x: hidden;
 }

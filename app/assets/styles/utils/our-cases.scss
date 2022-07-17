@@ -1,8 +1,6 @@
 .our-cases{
   background: $black;
   padding: 174px 0 0 0;
-  min-height: 100vh;
-  //min-width: 100vw;
   &__description{
     .button-2{
       display: none;
@@ -69,6 +67,7 @@
 
 @media (min-width:576px){
   .our-cases{
+    padding: 87px 0 0 0;
     &__block{
       padding: 0 0 76px 0;
       flex-direction: row;
@@ -90,6 +89,7 @@
 @media (min-width:768px){
 
   .our-cases{
+    padding: 136px 0 0 0;
     &__description{
       .button-2{
         margin: 32px 0 0 0;
@@ -121,6 +121,7 @@
 @media (min-width:992px){
 
   .our-cases{
+    padding: 200px 0 0 0;
     &__block{
       justify-content: flex-end;
       &-unit:first-child{
@@ -141,6 +142,7 @@
 @media (min-width:1200px){
 
   .our-cases{
+    padding: 0;
     &__block{
       justify-content: flex-end;
       &-unit:first-child{

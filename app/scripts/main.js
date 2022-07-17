@@ -30,7 +30,7 @@ document.addEventListener( 'click', (e) => {
     let itsButton = target === menuBurger;
     let menuIsActive = menu.classList.contains('menu-active');
 
-    if (!itsMenu && !itsBurger && menuIsActive) {
+    if (!itsMenu && !itsBurger && menuIsActive && !itsButton) {
         menu.classList.toggle('menu-active');
     }
 });
@@ -39,3 +39,4 @@ menuLink.forEach(link =>{
         menu.classList.remove('menu-active');
     })
 })
+
