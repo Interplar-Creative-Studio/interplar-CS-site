@@ -3,8 +3,10 @@
 @import 'utils/fonts';
 @import 'utils/ui-kit';
 @import 'utils/pre-header';
+@import 'utils/menu';
 
 
 :root {
   font-size: 10px;
+  background: $black;
 }
