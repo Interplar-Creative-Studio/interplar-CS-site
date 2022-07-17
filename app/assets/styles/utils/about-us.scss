@@ -1,0 +1,26 @@
+.about-us{
+  background: $black;
+  margin: -15px 0 0 0;
+  padding: 195px 0 0 0;
+  overflow: hidden;
+  .mobile-line{
+    position: relative;
+    width: 100%;
+    height: 2px;
+    margin: 65px auto;
+    background: $white;
+    content: '';
+    box-sizing: border-box;
+    opacity: 1;
+  }
+  .button-1{
+    margin: 31px 0 0 0;
+  }
+}
+@media (min-width: 576px){
+  .about-us{
+    .mobile-line{
+      width: 100vw;
+    }
+  }
+}

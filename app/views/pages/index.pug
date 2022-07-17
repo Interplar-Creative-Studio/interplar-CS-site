@@ -4,7 +4,30 @@ block title
   link(rel="stylesheet", href="assets/css/styles.min.css")
 
 block content
+  include ../includes/modules/pre-header
   include ../includes/modules/menu
+  section#about-us.about-us
+    .container
+      .row
+        .col-6.col-sm-5.col-md-5.col-lg-5.col-xl-5
+          h1(
+            data-title='привет'
+            ) привет
+        .col-6.col-sm-7.col-md-7.col-lg-7.col-xl-7
+          h2 и добро пожаловать на наш сайт
+      .row
+        .col-0.col-sm-5.col-md-5.col-lg-5.col-xl-5
+        .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
+          hr.mobile-line
+      .row
+        .col-0.col-sm-5.col-md-5.col-lg-5.col-xl-5
+
+        .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
+          p INTERPLAR — это мы, креативная студия. Создаем готовые решения в Digital-среде. Помогаем бизнесам оставаться актуальными в мире, где каждый день появляется что-то новое.
+          a(href="#").button-1
+            p создать свой проект
+
+
 
 
 

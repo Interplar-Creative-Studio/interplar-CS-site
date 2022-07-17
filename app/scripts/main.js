@@ -1,11 +1,11 @@
-/*const preHeader = document.querySelector('.pre-header')
-const preHeaderText = document.querySelector('.pre-header__content-text');*/
+const preHeader = document.querySelector('.pre-header')
+const preHeaderText = document.querySelector('.pre-header__content-text');
 const menuBurger = document.querySelector('.menu__button-mobile');
 const menuButton = document.querySelector('.menu__button');
 const menu = document.querySelector('.menu')
 const menuLink = document.querySelectorAll('.menu-link')
 
-/*setTimeout(function() {
+setTimeout(function() {
     preHeaderText.classList.add('pre-header__content-text-active');
 }, 2000);
 setTimeout(function() {
@@ -13,7 +13,7 @@ setTimeout(function() {
 }, 5000);
 setTimeout(function() {
     preHeader.style.display = "none";
-}, 7000);*/
+}, 7000);
 
 menuBurger.addEventListener('click',() =>{
     menu.classList.toggle('menu-active');
