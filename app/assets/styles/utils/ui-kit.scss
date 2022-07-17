@@ -141,6 +141,10 @@ p{
 
 .button-2{
   border: none;
+  padding: 0 calc(24px + 8px + 56px) 0 0;
+  &:before{
+    top:calc(50% - 2px);
+  }
   &:hover{
     background: $black;
     p{
@@ -148,6 +152,8 @@ p{
     }
     &:before{
       background: $white;
+      top:calc(50% - 2px);
+      width: calc(100% - 24px);
     }
   }
 }
@@ -172,7 +178,7 @@ p{
   }
 }
 
-@media (min-width:604px){
+@media (min-width:576px){
 
   h2{
     font-size: 3.2rem;
@@ -191,9 +197,14 @@ p{
       top: calc(50% + 2px);
     }
   }
-
+  .button-2{
+    padding: 0 calc(32px + 8px + 56px) 0 0;
+    &:before{
+      top: calc(50% - 2px);
+    }
+  }
 }
-@media (min-width:904px){
+@media (min-width:768px){
 
   h1{
     font-size: 8rem;
@@ -219,7 +230,7 @@ p{
   }
 
 }
-@media (min-width:1240px){
+@media (min-width:992px){
 
   h1{
     font-size: 10.4rem;
@@ -259,9 +270,21 @@ p{
       }
     }
   }
+  .button-2{
+    padding: 0 calc(24px + 8px + 68px) 0 0;
+    &:before{
+      top: calc(50%);
+    }
+    &:hover{
+      &:before{
+        top: calc(50%);
+        width: calc(100% - 24px);
+      }
+    }
+  }
 
 }
-@media (min-width:1440px){
+@media (min-width:1200px){
 
   h1{
     font-size: 12rem;

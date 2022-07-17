@@ -5,9 +5,11 @@
 @import 'utils/pre-header';
 @import 'utils/menu';
 @import 'utils/about-us';
+@import 'utils/our-cases';
 
 
 :root {
   font-size: 10px;
   background: $black;
+  overflow: hidden;
 }

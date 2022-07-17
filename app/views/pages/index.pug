@@ -5,14 +5,16 @@ block title
 
 block content
   include ../includes/modules/pre-header
+
   include ../includes/modules/menu
+
   section#about-us.about-us
     .container
       .row
         .col-6.col-sm-5.col-md-5.col-lg-5.col-xl-5
           h1(
             data-title='привет'
-            ) привет
+          ) привет
         .col-6.col-sm-7.col-md-7.col-lg-7.col-xl-7
           h2 и добро пожаловать на наш сайт
       .row
@@ -21,11 +23,42 @@ block content
           hr.mobile-line
       .row
         .col-0.col-sm-5.col-md-5.col-lg-5.col-xl-5
-
         .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
           p INTERPLAR — это мы, креативная студия. Создаем готовые решения в Digital-среде. Помогаем бизнесам оставаться актуальными в мире, где каждый день появляется что-то новое.
           a(href="#").button-1
             p создать свой проект
+
+  section#our-cases.our-cases
+    .container
+      .row
+        .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5.our-cases__description
+          h1(
+            data-title='НАШИ кейсы'
+          ) НАШИ кейсы
+          a(href="#").button-2
+            p ПЕРЕЙТИ В ПОРТФОЛИО
+        .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
+          .our-cases__block
+            a(href="#").our-cases__block-unit
+              picture
+                source(media='(min-width: 580px)', srcset='/assets/img/case.png')
+                img(src='/assets/img/case.png')
+              span Belle YOU
+            a(href="#").our-cases__block-unit
+              picture
+                source(media='(min-width: 580px)', srcset='/assets/img/case.png')
+                img(src='/assets/img/case.png')
+              span ООО «КХЧ»
+            a(href="#").our-cases__block-unit
+              picture
+                source(media='(min-width: 580px)', srcset='/assets/img/case.png')
+                img(src='/assets/img/case.png')
+              span Jinsilin
+      .row
+        .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5
+        .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7.our-cases__mobile-button
+          a(href="#").button-2
+            p ПЕРЕЙТИ В ПОРТФОЛИО
 
 
 

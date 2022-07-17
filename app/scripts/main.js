@@ -4,16 +4,18 @@ const menuBurger = document.querySelector('.menu__button-mobile');
 const menuButton = document.querySelector('.menu__button');
 const menu = document.querySelector('.menu')
 const menuLink = document.querySelectorAll('.menu-link')
+const pageBody = document.querySelector(':root')
 
 setTimeout(function() {
     preHeaderText.classList.add('pre-header__content-text-active');
 }, 2000);
 setTimeout(function() {
     preHeader.classList.add('pre-header-hide');
-}, 5000);
+    pageBody.style.overflowY = "scroll";
+}, 4000);
 setTimeout(function() {
     preHeader.style.display = "none";
-}, 7000);
+}, 5000);
 
 menuBurger.addEventListener('click',() =>{
     menu.classList.toggle('menu-active');

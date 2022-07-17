@@ -6,6 +6,7 @@
     display: inline-block;
     cursor: pointer;
     transition: $animation;
+    mix-blend-mode: difference;
   }
   &__button-mobile{
     top: 64px;
@@ -20,6 +21,7 @@
       top: 0;
       left: 0;
       transition: $animation;
+      mix-blend-mode: exclusion;
     }
     span:nth-child(2){
       top: auto;
@@ -135,7 +137,6 @@
     span{
       width: 16px;
       height: 1px;
-      background: $black;
       top: 50%;
       left: 0;
       transform: rotate(45deg);
@@ -154,7 +155,6 @@
       pointer-events: none;
     }
     span:nth-child(2),span:nth-child(3){
-      background: $black;
       opacity: 1;
       height: 1px;
     }
@@ -170,7 +170,7 @@
   }
 }
 
-@media (min-width:604px){
+@media (min-width:576px){
 
   .menu{
     &__button-mobile{
@@ -185,7 +185,7 @@
   }
 
 }
-@media (min-width:904px){
+@media (min-width:768px){
 
   .menu{
     &__button{
@@ -220,7 +220,7 @@
   }
 
 }
-@media (min-width:1240px){
+@media (min-width:992px){
 
   .menu{
     &__button{
@@ -263,7 +263,7 @@
   }
 
 }
-@media (min-width:1440px){
+@media (min-width:1200px){
 
   .menu{
     &__button{
