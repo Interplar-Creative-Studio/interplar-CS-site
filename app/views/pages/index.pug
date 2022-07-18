@@ -6,9 +6,9 @@ block title
 
 
 block content
-  //include ../includes/modules/pre-header
+  include ../includes/modules/pre-header
 
-  //include ../includes/modules/menu
+  include ../includes/modules/menu
 
   section#about-us.about-us
     .container
@@ -31,7 +31,7 @@ block content
             p создать свой проект
 
 
-  //section#our-cases.our-cases
+  section#our-cases.our-cases
     .container
       .row
         .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5.our-cases__description
@@ -82,13 +82,14 @@ block content
               li.splide__slide.direction__slide
                 p бизнес-функционал
                 p настраиваем телефонию, кастомные метрики, сбор статистики, создаём бизнес-ботов для Telegram и мессенджеров.
-        .col-6.col-sm-5.col-md-5.col-lg-5.col-xl-5.direction__buttons
+        .col-0.d-sm-none.d-md-block.col-md-1.col-lg-1.col-xl-2
+        .col-6.col-sm-5.col-md-4.col-lg-4.col-xl-3.direction__buttons
           ul.splide__pagination.direction__pagination.splide__pagination--ltr(
             role="tablist",
             aria-label="Select a slide to show",
           )
           .direction__slide-number 01
-  //section#how-we-work.how-we-work
+  section#how-we-work.how-we-work
     .container
       .row
         .col-6.col-sm-10.col-md-10.col-lg-10.col-xl-10
@@ -117,7 +118,26 @@ block content
           p 04 // сдача проекта
           p финал. Здесь мы вносим последние правки, а Вы принимаете готовый продукт.
         .d-none.d-xl-block.col-xl-1
-
+  section#team.team
+    .container
+      .row
+        .col-12.col-sm-5
+          h1(
+            data-title='команда'
+          ) команда
+        .col-12.col-sm-7
+          p дружная команда с большими планами. Точно не боимся нестандартных проектов. Любим пробовать что-то новое и экспериментировать.
+      .row
+        .col-12.col-sm-12
+          hr
+      .row
+        .col-12.col-sm-12
+          span /*мы здесь из-за наших идей*/
+        .col-12.col-sm-12
+          h2 честная работа и взаимодействие между людьми. Ведём разработку открыто, всегда готовы ответить на вопросы. Любим свою работу и любим делать её хорошо, поэтому всегда ищем наилучшее решение для Ваших проектов.
+      .row
+        .col-12.col-sm-12
+          hr
 block scripts
   script(src="assets/libs/splide.js")
   script(src="assets/scripts/main.min.js")

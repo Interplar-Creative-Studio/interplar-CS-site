@@ -1,6 +1,6 @@
 const direction = document.querySelector('.direction__pagination');
 const directionSlideNumber = document.querySelector('.direction__slide-number')
-/*const preHeader = document.querySelector('.pre-header')
+const preHeader = document.querySelector('.pre-header')
 const preHeaderText = document.querySelector('.pre-header__content-text');
 const menuBurger = document.querySelector('.menu__button-mobile');
 const menuButton = document.querySelector('.menu__button');
@@ -41,7 +41,7 @@ menuLink.forEach(link =>{
     link.addEventListener('click',() =>{
         menu.classList.remove('menu-active');
     })
-})*/
+})
 new Splide('.splide',{
     arrows: false,
     pagination: true,

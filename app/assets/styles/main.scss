@@ -8,9 +8,11 @@
 @import 'utils/our-cases';
 @import 'utils/direction';
 @import 'utils/how-we-work';
+@import 'utils/team';
 
 :root {
   font-size: 10px;
   background: $black;
   overflow-x: hidden;
+  overflow-y: hidden;
 }

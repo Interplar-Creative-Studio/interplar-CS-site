@@ -1,7 +1,9 @@
 .direction{
   background: $black;
+  padding: 160px 0 0 0;
   h2{
     padding: 0 0 53px 0;
+    font-family: 'Montserrat-Lighter',sans-serif;
   }
   hr{
     height: 2px;
@@ -14,11 +16,9 @@
     p:first-child{
       padding: 0 0 15px 0;
       font-family: $montserrat400;
-      font-weight: 400;
     }
     p:last-child{
       font-family: $montserrat200;
-      font-weight: 200;
       margin: 0 0 0 1px;
     }
   }
@@ -30,6 +30,7 @@
     justify-content: space-between;
     align-items: flex-start;
     top: 0;
+    padding: 0;
     li{
       width: calc(33% - 5px);
       height: 2px;
@@ -60,5 +61,124 @@
     transform: translateX(-50%);
     font-size: 2.4rem;
     line-height: 100%;
+    font-family: $montserrat200;
   }
+}
+@media (min-width:576px){
+
+  .direction{
+    overflow: hidden;
+    padding: 100px 0 0 0;
+    h2{
+      padding: 0 0 51px 0;
+    }
+    hr{
+      width: 100vw;
+      margin: 0 0 33px 0;
+    }
+    &__slide{
+      display: flex;
+      justify-content: space-between;
+      p:first-child{
+        padding: 0;
+        max-width: 104px;
+      }
+      p:last-child{
+        padding: 0;
+        max-width: 197px;
+      }
+    }
+    .direction__slide-number{
+      top: 21px;
+      font-size: 3.4rem;
+      line-height: 100%;
+    }
+  }
+
+}
+@media (min-width:768px){
+
+  .direction{
+    padding: 150px 0 0 0;
+    h2{
+      padding: 0 0 162px 0;
+    }
+    hr{
+      width: 100vw;
+      margin: 0 0 40px 0;
+    }
+    &__slide{
+      p:first-child{
+        padding: 0;
+        max-width: 126px;
+      }
+      p:last-child{
+        padding: 0;
+        max-width: 264px;
+      }
+    }
+    .direction__slide-number{
+      top: 38px;
+      font-size: 4rem;
+      line-height: 100%;
+    }
+  }
+
+}
+@media (min-width:992px){
+
+  .direction{
+    padding: 200px 0 0 0;
+    h2{
+      padding: 0 0 120px 0;
+    }
+    hr{
+      margin: 0 0 64px 0;
+    }
+    &__slide{
+      p:first-child{
+        max-width: 162px;
+      }
+      p:last-child{
+        max-width: 264px;
+      }
+    }
+    .direction__slide-number{
+      top: 60px;
+      font-size: 5.6rem;
+      line-height: 100%;
+    }
+  }
+
+}
+@media (min-width:1200px){
+
+  .direction{
+    padding: 245px 0 0 0;
+    h2{
+      padding: 0 0 120px 0;
+    }
+    hr{
+      margin: 0 0 72px 0;
+    }
+    &__slide{
+      p:first-child{
+        max-width: 248px;
+      }
+      p:last-child{
+        max-width: 336px;
+      }
+    }
+    &__pagination{
+      li{
+        max-width: 72px;
+      }
+    }
+    .direction__slide-number{
+      top: 70px;
+      font-size: 6.3rem;
+      line-height: 100%;
+    }
+  }
+
 }
