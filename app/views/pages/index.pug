@@ -138,6 +138,42 @@ block content
       .row
         .col-12.col-sm-12
           hr
+  section#our-clients.our-clients
+    .container
+      .row
+        .col-12.col-sm-12.our-clients__title
+          h1(
+            data-title='наши клиенты'
+          ) наши клиенты
+          hr
+      .row.our-clients__list
+        .col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.our-clients__unit
+          hr
+          picture
+            source(media='(min-width: 1200px)', srcset='/assets/img/client1-dt.png')
+            source(media='(min-width: 992px)', srcset='/assets/img/client1-nt.png')
+            source(media='(min-width: 768px)', srcset='/assets/img/client1-tb.png')
+            source(media='(min-width: 576px)', srcset='/assets/img/client1-mb.png')
+            img(src='/assets/img/client1.png')
+          hr
+        .col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.our-clients__unit
+          hr
+          picture
+            source(media='(min-width: 1200px)', srcset='/assets/img/client2-dt.png')
+            source(media='(min-width: 992px)', srcset='/assets/img/client2-nt.png')
+            source(media='(min-width: 768px)', srcset='/assets/img/client2-tb.png')
+            source(media='(min-width: 576px)', srcset='/assets/img/client2-mb.png')
+            img(src='/assets/img/client2.png')
+          hr
+        .col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.our-clients__unit
+          hr
+          picture
+            source(media='(min-width: 1200px)', srcset='/assets/img/client3-dt.png')
+            source(media='(min-width: 992px)', srcset='/assets/img/client3-nt.png')
+            source(media='(min-width: 768px)', srcset='/assets/img/client3-tb.png')
+            source(media='(min-width: 576px)', srcset='/assets/img/client3-mb.png')
+            img(src='/assets/img/client3.png')
+          hr
 block scripts
   script(src="assets/libs/splide.js")
   script(src="assets/scripts/main.min.js")

@@ -4,8 +4,10 @@
   height: 100vh;
   overflow: hidden;
   transition: $animation;
-  position: absolute;
+  position: fixed;
   z-index: 999999;
+  top: 0;
+  left: 0;
   &__content{
     display: flex;
     justify-content: center;
