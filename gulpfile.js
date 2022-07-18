@@ -8,7 +8,7 @@ const scss2css_prod = require('./tasks/production/scss2css');
 
 const scripts = require('./tasks/scripts');
 const scripts_prod = require('./tasks/production/scripts');
-
+const libs = require('./tasks/libs')
 const fonts = require('./tasks/fonts');
 const static = require('./tasks/static');
 const favicons = require('./tasks/favicons');
@@ -18,8 +18,8 @@ const clean = require('./tasks/clean');
 const serve = require('./tasks/serve');
 const serve_prod = require('./tasks/production/serve');
 
-const dev = series(pug2html, scss2css, scripts, fonts, images);
-const prod = series(pug2html_prod, scss2css_prod, scripts_prod, fonts, static, favicons, images);
+const dev = series(pug2html, scss2css, scripts, fonts, images, libs);
+const prod = series(pug2html_prod, scss2css_prod, scripts_prod, fonts, static, favicons, images, libs);
 
 task('serve:dev', series(serve));
 task('serve:prod', series(serve_prod));

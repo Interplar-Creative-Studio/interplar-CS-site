@@ -1,5 +1,8 @@
 $header-gradient-1: linear-gradient(314deg, rgba(255,255,255,1) 15.8%, rgba(255,255,255,1) 38%, rgba(255,75,28,1) 38.12%, rgba(255,75,28,1) 60.76%, rgba(6,255,255,1) 60.77%, rgba(6,255,255,1) 81.71%);
 $animation: all 1s ease;
+$montserrat200:'Montserrat-ExtraLight',sans-serif;
+$montserrat300:'Montserrat',sans-serif;
+$montserrat400:'Montserrat-Regular',sans-serif;
 
 h1{
   font-family:'BebasNeue-light',sans-serif;
@@ -46,7 +49,7 @@ h1{
 }
 
 h2{
-  font-family:'Montserrat',sans-serif;
+  font-family:'Montserrat-Light',sans-serif;
   display: inline-block;
   font-size: 2.4rem;
   line-height: 2.4rem;
@@ -57,7 +60,7 @@ h2{
 }
 
 p{
-  font-family:'Montserrat',sans-serif;
+  font-family:'Montserrat-Light',sans-serif;
   display: inline-block;
   font-size: 1.4rem;
   line-height: 2rem;
@@ -68,7 +71,7 @@ p{
 }
 
 .link{
-  font-family:'Montserrat',sans-serif;
+  font-family:'Montserrat-Light',sans-serif;
   display: inline-block;
   font-size: 1.4rem;
   line-height: 1.4rem;

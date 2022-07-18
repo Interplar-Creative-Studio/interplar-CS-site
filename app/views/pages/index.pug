@@ -1,12 +1,14 @@
 extends ../layouts/master
 
 block title
+  link(rel="stylesheet", href="assets/libs/splide.min.css")
   link(rel="stylesheet", href="assets/css/styles.min.css")
 
-block content
-  include ../includes/modules/pre-header
 
-  include ../includes/modules/menu
+block content
+  //include ../includes/modules/pre-header
+
+  //include ../includes/modules/menu
 
   section#about-us.about-us
     .container
@@ -29,7 +31,7 @@ block content
             p создать свой проект
 
 
-  section#our-cases.our-cases
+  //section#our-cases.our-cases
     .container
       .row
         .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5.our-cases__description
@@ -61,17 +63,32 @@ block content
           a(href="#").button-2
             p ПЕРЕЙТИ В ПОРТФОЛИО
 
-  //section#direction.direction
+  section#direction.direction.splide
     .container
       .row
         .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
-          h2 наше основное направление <br />
-            | — это веб-разработка
-      .row
-        .col-6.order-2.col-sm-5.col-md-5.col-lg-5.col-xl-5
-
-        .col-6.order-2.col-sm-7.col-md-7.col-lg-7.col-xl-7
-  section#how-we-work.how-we-work
+          h2 наше&nbsp;основное направление — это веб-разработка
+      .row.d-flex.flex-sm-row-reverse.flex-md-row-reverse.flex-lg-row-reverse.flex-xl-row-reverse
+        .col-6.col-sm-7.col-md-7.col-lg-7.col-xl-7
+          hr
+          .splide__track.direction__slider
+            ul.splide__list.direction__list
+              li.splide__slide.direction__slide
+                p бизнес-функционал
+                p настраиваем телефонию, кастомные метрики, сбор статистики, создаём бизнес-ботов для Telegram и мессенджеров.
+              li.splide__slide.direction__slide
+                p бизнес-функционал
+                p настраиваем телефонию, кастомные метрики, сбор статистики, создаём бизнес-ботов для Telegram и мессенджеров.
+              li.splide__slide.direction__slide
+                p бизнес-функционал
+                p настраиваем телефонию, кастомные метрики, сбор статистики, создаём бизнес-ботов для Telegram и мессенджеров.
+        .col-6.col-sm-5.col-md-5.col-lg-5.col-xl-5.direction__buttons
+          ul.splide__pagination.direction__pagination.splide__pagination--ltr(
+            role="tablist",
+            aria-label="Select a slide to show",
+          )
+          .direction__slide-number 01
+  //section#how-we-work.how-we-work
     .container
       .row
         .col-6.col-sm-10.col-md-10.col-lg-10.col-xl-10
@@ -102,4 +119,5 @@ block content
         .d-none.d-xl-block.col-xl-1
 
 block scripts
+  script(src="assets/libs/splide.js")
   script(src="assets/scripts/main.min.js")

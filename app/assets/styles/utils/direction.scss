@@ -1,3 +1,64 @@
 .direction{
   background: $black;
+  h2{
+    padding: 0 0 53px 0;
+  }
+  hr{
+    height: 2px;
+    width: 100%;
+    opacity: 1;
+    background: $white;
+    margin: 0 0 28px 0;
+  }
+  &__slide{
+    p:first-child{
+      padding: 0 0 15px 0;
+      font-family: $montserrat400;
+      font-weight: 400;
+    }
+    p:last-child{
+      font-family: $montserrat200;
+      font-weight: 200;
+      margin: 0 0 0 1px;
+    }
+  }
+  &__buttons{
+    position: relative;
+  }
+  &__pagination{
+    position: relative;
+    justify-content: space-between;
+    align-items: flex-start;
+    top: 0;
+    li{
+      width: calc(33% - 5px);
+      height: 2px;
+      .splide__pagination__page{
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        opacity: 0.6;
+        margin: 0;
+        position: relative;
+        top: -7px;
+      }
+      .is-active{
+        transform: none;
+        opacity: 1;
+      }
+      &:before{
+        left: 50%;
+
+      }
+    }
+  }
+  .direction__slide-number{
+    position: absolute;
+    color: $white;
+    top: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.4rem;
+    line-height: 100%;
+  }
 }
