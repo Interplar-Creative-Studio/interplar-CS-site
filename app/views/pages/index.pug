@@ -2,184 +2,188 @@ extends ../layouts/master
 
 block title
   link(rel="stylesheet", href="assets/libs/splide.min.css")
+  link(rel="stylesheet", href="assets/libs/SmoothScroll.css")
   link(rel="stylesheet", href="assets/css/styles.min.css")
 
 
 block content
   include ../includes/modules/pre-header
   include ../includes/modules/menu
-  section#about-us.about-us
-    .container
-      .row
-        .col-6.col-sm-5.col-md-5.col-lg-5.col-xl-5
-          h1(
-            data-title='привет'
-          ) привет
-        .col-6.col-sm-7.col-md-7.col-lg-7.col-xl-7
-          h2 и добро пожаловать на наш сайт
-      .row
-        .col-0.col-sm-5.col-md-5.col-lg-5.col-xl-5
-        .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
-          hr.mobile-line
-      .row
-        .col-0.col-sm-5.col-md-5.col-lg-5.col-xl-5
-        .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
-          p INTERPLAR — это мы, креативная студия. Создаем готовые решения в Digital-среде. Помогаем бизнесам оставаться актуальными в мире, где каждый день появляется что-то новое.
-          a(href="#").button-1
-            p создать свой проект
+  #scroller-wrapper
+    section#about-us.about-us
+        .container
+          .row
+            .col-6.col-sm-5.col-md-5.col-lg-5.col-xl-5
+              h1(
+                data-title='привет'
+              ) привет
+            .col-6.col-sm-7.col-md-7.col-lg-7.col-xl-7
+              h2 и добро пожаловать на наш сайт
+          .row
+            .col-0.col-sm-5.col-md-5.col-lg-5.col-xl-5
+            .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
+              hr.mobile-line
+          .row
+            .col-0.col-sm-5.col-md-5.col-lg-5.col-xl-5
+            .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
+              p INTERPLAR — это мы, креативная студия. Создаем готовые решения в Digital-среде. Помогаем бизнесам оставаться актуальными в мире, где каждый день появляется что-то новое.
+              a(href="#").button-1
+                p создать свой проект
 
 
-  section#our-cases.our-cases
-    .container
-      .row
-        .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5.our-cases__description
-          h1(
-            data-title='НАШИ кейсы'
-          ) НАШИ кейсы
-          a(href="#").button-2
-            p ПЕРЕЙТИ В ПОРТФОЛИО
-        .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
-          .our-cases__block
-            a(href="#").our-cases__block-unit
+    section#our-cases.our-cases
+        .container
+          .row
+            .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5.our-cases__description
+              h1(
+                data-title='НАШИ кейсы'
+              ) НАШИ кейсы
+              a(href="#").button-2
+                p ПЕРЕЙТИ В ПОРТФОЛИО
+            .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
+              .our-cases__block
+                a(href="#").our-cases__block-unit
+                  picture
+                    source(media='(min-width: 580px)', srcset='/assets/img/case.png')
+                    img(src='/assets/img/case.png')
+                  span Belle YOU
+                a(href="#").our-cases__block-unit
+                  picture
+                    source(media='(min-width: 580px)', srcset='/assets/img/case.png')
+                    img(src='/assets/img/case.png')
+                  span ООО «КХЧ»
+                a(href="#").our-cases__block-unit
+                  picture
+                    source(media='(min-width: 580px)', srcset='/assets/img/case.png')
+                    img(src='/assets/img/case.png')
+                  span Jinsilin
+          .row
+            .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5
+            .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7.our-cases__mobile-button
+              a(href="#").button-2
+                p ПЕРЕЙТИ В ПОРТФОЛИО
+
+
+    section#direction.direction.splide
+        .container
+          .row
+            .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
+              h2 наше&nbsp;основное направление — это веб-разработка
+          .row.d-flex.flex-sm-row-reverse.flex-md-row-reverse.flex-lg-row-reverse.flex-xl-row-reverse
+            .col-6.col-sm-7.col-md-7.col-lg-7.col-xl-7
+              hr
+              .splide__track.direction__slider
+                ul.splide__list.direction__list
+                  li.splide__slide.direction__slide
+                    p бизнес-функционал
+                    p настраиваем телефонию, кастомные метрики, сбор статистики, создаём бизнес-ботов для Telegram и мессенджеров.
+                  li.splide__slide.direction__slide
+                    p бизнес-функционал
+                    p настраиваем телефонию, кастомные метрики, сбор статистики, создаём бизнес-ботов для Telegram и мессенджеров.
+                  li.splide__slide.direction__slide
+                    p бизнес-функционал
+                    p настраиваем телефонию, кастомные метрики, сбор статистики, создаём бизнес-ботов для Telegram и мессенджеров.
+            .d-none.d-md-block.col-md-1.col-lg-1.col-xl-2
+            .col-6.col-sm-5.col-md-4.col-lg-4.col-xl-3.direction__buttons
+              ul.splide__pagination.direction__pagination.splide__pagination--ltr(
+                role="tablist",
+                aria-label="Select a slide to show",
+              )
+              .direction__slide-number 01
+
+    section#how-we-work.how-we-work
+        .container
+          .row
+            .col-6.col-sm-10.col-md-10.col-lg-10.col-xl-10
+              h1(
+                data-title='КАК МЫ РАБОТАЕМ'
+              ) КАК МЫ РАБОТАЕМ
+          .row.how-we-work__block
+            .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-4.how-we-work__block-unit
+              hr
+              p 01 // анализ задач
+              p мы получаем всю необходимую информацию. Вместе с Вами формируем общее видение проекта, определяем цели. Важнейший этап в начале разработки.
+            .col-0.d-sm-none.d-md-block.col-md-1.col-lg-1.col-xl-1
+            .col-12.col-sm-7.col-md-6.col-lg-6.col-xl-6.how-we-work__block-unit
+              hr.long
+              p 02 // разработка плана
+              p продумываем детали работы, подбираем инструменты и специалистов для реализации проекта. Согласовываем всё что придумали с Вами, отвечаем на вопросы.
+            .d-none.d-xl-block.col-xl-1
+          .row
+            .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-4.how-we-work__block-unit
+              hr
+              p 03 // разработка
+              p согласно плану мы делаем своё дело. Всегда держим Вас в курсе происходящего.
+            .col-0.d-sm-none.d-md-block.col-md-1.col-lg-1.col-xl-1
+            .col-12.col-sm-7.col-md-6.col-lg-6.col-xl-6.how-we-work__block-unit
+              hr.long
+              p 04 // сдача проекта
+              p финал. Здесь мы вносим последние правки, а Вы принимаете готовый продукт.
+            .d-none.d-xl-block.col-xl-1
+
+
+    section#team.team
+        .container
+          .row
+            .col-12.col-sm-5
+              h1(
+                data-title='команда'
+              ) команда
+            .col-12.col-sm-7
+              p дружная команда с большими планами. Точно не боимся нестандартных проектов. Любим пробовать что-то новое и экспериментировать.
+          .row
+            .col-12.col-sm-12
+              hr
+          .row
+            .col-12.col-sm-12
+              span /*мы здесь из-за наших идей*/
+            .col-12.col-sm-12
+              h2 честная работа и взаимодействие между людьми. Ведём разработку открыто, всегда готовы ответить на вопросы. Любим свою работу и любим делать её хорошо, поэтому всегда ищем наилучшее решение для Ваших проектов.
+          .row
+            .col-12.col-sm-12
+              hr
+
+    section#our-clients.our-clients
+        .container
+          .row
+            .col-12.col-sm-12.our-clients__title
+              h1(
+                data-title='наши клиенты'
+              ) наши клиенты
+              hr
+          .row.our-clients__list
+            .col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.our-clients__unit
+              hr
               picture
-                source(media='(min-width: 580px)', srcset='/assets/img/case.png')
-                img(src='/assets/img/case.png')
-              span Belle YOU
-            a(href="#").our-cases__block-unit
+                source(media='(min-width: 1200px)', srcset='/assets/img/client1-dt.png')
+                source(media='(min-width: 992px)', srcset='/assets/img/client1-nt.png')
+                source(media='(min-width: 768px)', srcset='/assets/img/client1-tb.png')
+                source(media='(min-width: 576px)', srcset='/assets/img/client1-mb.png')
+                img(src='/assets/img/client1.png')
+              hr
+            .col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.our-clients__unit
+              hr
               picture
-                source(media='(min-width: 580px)', srcset='/assets/img/case.png')
-                img(src='/assets/img/case.png')
-              span ООО «КХЧ»
-            a(href="#").our-cases__block-unit
+                source(media='(min-width: 1200px)', srcset='/assets/img/client2-dt.png')
+                source(media='(min-width: 992px)', srcset='/assets/img/client2-nt.png')
+                source(media='(min-width: 768px)', srcset='/assets/img/client2-tb.png')
+                source(media='(min-width: 576px)', srcset='/assets/img/client2-mb.png')
+                img(src='/assets/img/client2.png')
+              hr
+            .col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.our-clients__unit
+              hr
               picture
-                source(media='(min-width: 580px)', srcset='/assets/img/case.png')
-                img(src='/assets/img/case.png')
-              span Jinsilin
-      .row
-        .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5
-        .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7.our-cases__mobile-button
-          a(href="#").button-2
-            p ПЕРЕЙТИ В ПОРТФОЛИО
+                source(media='(min-width: 1200px)', srcset='/assets/img/client3-dt.png')
+                source(media='(min-width: 992px)', srcset='/assets/img/client3-nt.png')
+                source(media='(min-width: 768px)', srcset='/assets/img/client3-tb.png')
+                source(media='(min-width: 576px)', srcset='/assets/img/client3-mb.png')
+                img(src='/assets/img/client3.png')
+              hr
 
+    include ../includes/modules/feedback
+    include ../includes/modules/contacts
 
-  section#direction.direction.splide
-    .container
-      .row
-        .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
-          h2 наше&nbsp;основное направление — это веб-разработка
-      .row.d-flex.flex-sm-row-reverse.flex-md-row-reverse.flex-lg-row-reverse.flex-xl-row-reverse
-        .col-6.col-sm-7.col-md-7.col-lg-7.col-xl-7
-          hr
-          .splide__track.direction__slider
-            ul.splide__list.direction__list
-              li.splide__slide.direction__slide
-                p бизнес-функционал
-                p настраиваем телефонию, кастомные метрики, сбор статистики, создаём бизнес-ботов для Telegram и мессенджеров.
-              li.splide__slide.direction__slide
-                p бизнес-функционал
-                p настраиваем телефонию, кастомные метрики, сбор статистики, создаём бизнес-ботов для Telegram и мессенджеров.
-              li.splide__slide.direction__slide
-                p бизнес-функционал
-                p настраиваем телефонию, кастомные метрики, сбор статистики, создаём бизнес-ботов для Telegram и мессенджеров.
-        .d-none.d-md-block.col-md-1.col-lg-1.col-xl-2
-        .col-6.col-sm-5.col-md-4.col-lg-4.col-xl-3.direction__buttons
-          ul.splide__pagination.direction__pagination.splide__pagination--ltr(
-            role="tablist",
-            aria-label="Select a slide to show",
-          )
-          .direction__slide-number 01
-
-  section#how-we-work.how-we-work
-    .container
-      .row
-        .col-6.col-sm-10.col-md-10.col-lg-10.col-xl-10
-          h1(
-            data-title='КАК МЫ РАБОТАЕМ'
-          ) КАК МЫ РАБОТАЕМ
-      .row.how-we-work__block
-        .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-4.how-we-work__block-unit
-          hr
-          p 01 // анализ задач
-          p мы получаем всю необходимую информацию. Вместе с Вами формируем общее видение проекта, определяем цели. Важнейший этап в начале разработки.
-        .col-0.d-sm-none.d-md-block.col-md-1.col-lg-1.col-xl-1
-        .col-12.col-sm-7.col-md-6.col-lg-6.col-xl-6.how-we-work__block-unit
-          hr.long
-          p 02 // разработка плана
-          p продумываем детали работы, подбираем инструменты и специалистов для реализации проекта. Согласовываем всё что придумали с Вами, отвечаем на вопросы.
-        .d-none.d-xl-block.col-xl-1
-      .row
-        .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-4.how-we-work__block-unit
-          hr
-          p 03 // разработка
-          p согласно плану мы делаем своё дело. Всегда держим Вас в курсе происходящего.
-        .col-0.d-sm-none.d-md-block.col-md-1.col-lg-1.col-xl-1
-        .col-12.col-sm-7.col-md-6.col-lg-6.col-xl-6.how-we-work__block-unit
-          hr.long
-          p 04 // сдача проекта
-          p финал. Здесь мы вносим последние правки, а Вы принимаете готовый продукт.
-        .d-none.d-xl-block.col-xl-1
-
-
-  section#team.team
-    .container
-      .row
-        .col-12.col-sm-5
-          h1(
-            data-title='команда'
-          ) команда
-        .col-12.col-sm-7
-          p дружная команда с большими планами. Точно не боимся нестандартных проектов. Любим пробовать что-то новое и экспериментировать.
-      .row
-        .col-12.col-sm-12
-          hr
-      .row
-        .col-12.col-sm-12
-          span /*мы здесь из-за наших идей*/
-        .col-12.col-sm-12
-          h2 честная работа и взаимодействие между людьми. Ведём разработку открыто, всегда готовы ответить на вопросы. Любим свою работу и любим делать её хорошо, поэтому всегда ищем наилучшее решение для Ваших проектов.
-      .row
-        .col-12.col-sm-12
-          hr
-
-  section#our-clients.our-clients
-    .container
-      .row
-        .col-12.col-sm-12.our-clients__title
-          h1(
-            data-title='наши клиенты'
-          ) наши клиенты
-          hr
-      .row.our-clients__list
-        .col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.our-clients__unit
-          hr
-          picture
-            source(media='(min-width: 1200px)', srcset='/assets/img/client1-dt.png')
-            source(media='(min-width: 992px)', srcset='/assets/img/client1-nt.png')
-            source(media='(min-width: 768px)', srcset='/assets/img/client1-tb.png')
-            source(media='(min-width: 576px)', srcset='/assets/img/client1-mb.png')
-            img(src='/assets/img/client1.png')
-          hr
-        .col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.our-clients__unit
-          hr
-          picture
-            source(media='(min-width: 1200px)', srcset='/assets/img/client2-dt.png')
-            source(media='(min-width: 992px)', srcset='/assets/img/client2-nt.png')
-            source(media='(min-width: 768px)', srcset='/assets/img/client2-tb.png')
-            source(media='(min-width: 576px)', srcset='/assets/img/client2-mb.png')
-            img(src='/assets/img/client2.png')
-          hr
-        .col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.our-clients__unit
-          hr
-          picture
-            source(media='(min-width: 1200px)', srcset='/assets/img/client3-dt.png')
-            source(media='(min-width: 992px)', srcset='/assets/img/client3-nt.png')
-            source(media='(min-width: 768px)', srcset='/assets/img/client3-tb.png')
-            source(media='(min-width: 576px)', srcset='/assets/img/client3-mb.png')
-            img(src='/assets/img/client3.png')
-          hr
-
-  include ../includes/modules/feedback
-  include ../includes/modules/contacts
 block scripts
   script(src="assets/libs/splide.js")
+  script(src="assets/libs/SmoothScroll.js")
   script(src="assets/scripts/main.min.js")

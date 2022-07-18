@@ -285,7 +285,13 @@ p{
       }
     }
   }
-
+  .button-3{
+    &:hover{
+      &:before{
+        width: calc(100% - 60px);
+      }
+    }
+  }
 }
 @media (min-width:1200px){
 
