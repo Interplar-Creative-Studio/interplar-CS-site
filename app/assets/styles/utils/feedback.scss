@@ -1,0 +1,261 @@
+.feedback{
+  padding: 173px 0 0 0;
+  h1{
+    padding: 0 0 50px 0;
+  }
+  &__title{
+    background: $black;
+  }
+  &__block{
+    background: $white;
+  }
+  &__form{
+    padding: 51px 0 45px 0;
+    display: flex;
+    flex-direction: column;
+    h2{
+      color: $black;
+    }
+    input,textarea{
+      display: block;
+      border: 1px solid $black;
+      padding: 16px;
+      background: $white;
+      width: 100%;
+      font-family: $montserrat300;
+      font-size: 1.4rem;
+      &::placeholder{
+        font-family: $montserrat300;
+        font-size: 1.4rem;
+      }
+    }
+    &-information{
+      display: flex;
+      flex-direction: column;
+      h2{
+        padding: 0 0 30px 0;
+      }
+      input:last-child{
+        margin: 16px 0 0 0;
+      }
+    }
+    &-text{
+      display: flex;
+      flex-direction: column;
+      padding: 43px 0 0 0;
+      textarea{
+        resize: none;
+        height: 144px;
+        margin: 29px 0 0 0;
+      }
+    }
+    &-file{
+      padding: 43px 0 0 0;
+      input{
+        margin: 29px 0 0 0;
+      }
+    }
+    &-button{
+      display: flex;
+      flex-direction: column;
+      padding: 64px 0 0 0;
+      max-width: 300px;
+      width: 100%;
+      span{
+        font-family: $montserrat400;
+        font-size: 1rem;
+        line-height: 100%;
+        color: $black;
+        display: inline-block;
+        padding: 10px 0 0 0;
+      }
+    }
+  }
+}
+@media (min-width:576px){
+
+  .feedback{
+    padding: 86px 0 0 0;
+
+    &__form{
+      padding: 14px 0 30px 0;
+      h2{
+        font-size: 1.4rem;
+      }
+      input,textarea{
+        padding: 8px 24px;
+        max-width: 344px;
+      }
+      &-information{
+        h2{
+          padding: 0 0 12px 0;
+        }
+        input:last-child{
+          margin: 8px 0 0 0;
+        }
+      }
+      &-text{
+        padding: 12px 0 0 0;
+        textarea{
+          height: 104px;
+          margin: 12px 0 0 0;
+        }
+      }
+      &-file{
+        padding: 12px 0 0 0;
+        input{
+          margin: 12px 0 0 0;
+        }
+      }
+      &-button{
+        flex-direction: row;
+        padding: 40px 0 0 0;
+        max-width: 388px;
+        button{
+          min-width: 264px;
+        }
+        span{
+          font-size: 0.8rem;
+          display: inline-block;
+          padding: 0 0 0 8px;
+        }
+      }
+    }
+  }
+  .feedback-mobile{
+    background: $white;
+  }
+
+}
+@media (min-width:768px){
+
+  .feedback{
+    padding: 200px 0 0 0;
+    overflow: hidden;
+    &__form{
+      background: $white;
+      padding: 26px 0 44px 64px;
+      width: 100vw;
+      h2{
+        font-size: 1.6rem;
+      }
+      &-information{
+        h2{
+          padding: 0 0 14px 0;
+        }
+      }
+      &-text{
+        padding: 14px 0 0 0;
+        textarea{
+          margin: 14px 0 0 0;
+        }
+      }
+      &-file{
+        padding: 26px 0 0 0;
+        input{
+          margin: 14px 0 0 0;
+        }
+      }
+      &-button{
+        padding: 32px 0 0 0;
+        max-width: 376px;
+      }
+    }
+  }
+
+}
+@media (min-width:992px){
+
+  .feedback{
+    padding: 190px 0 0 0;
+    &__form{
+      padding: 30px 0 30px 75px;
+      h2{
+        font-size: 3.2rem;
+      }
+      input,textarea{
+        padding: 12px 22px;
+        max-width: 400px;
+      }
+      &-information{
+        h2{
+          padding: 0 0 17px 0;
+        }
+      }
+      &-text{
+        padding: 30px 0 0 0;
+        textarea{
+          margin: 17px 0 0 0;
+        }
+      }
+      &-file{
+        padding: 30px 0 0 0;
+        input{
+          margin: 17px 0 0 0;
+        }
+      }
+      &-button{
+        padding: 56px 0 0 0;
+        max-width: 420px;
+        button{
+          min-width: 336px;
+        }
+        span{
+          align-self: center;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+}
+@media (min-width:1100px){
+
+  .feedback{
+    &__form{
+      input,textarea{
+        max-width: 512px;
+      }
+      &-button{
+        max-width: 524px;
+        span{
+          padding: 0 0 0 16px;
+        }
+      }
+    }
+  }
+
+}
+@media (min-width:1200px){
+
+  .feedback{
+    padding: 250px 0 0 0;
+    &__form{
+      padding: 53px 0 58px 88px;
+      &-information{
+        h2{
+          padding: 0 0 25px 0;
+        }
+        input:last-child{
+          margin: 16px 0 0 0;
+        }
+      }
+      &-text{
+        padding: 37px 0 0 0;
+        textarea{
+          margin: 25px 0 0 0;
+        }
+      }
+      &-file{
+        padding: 37px 0 0 0;
+        input{
+          margin: 32px 0 0 0;
+        }
+      }
+      &-button{
+        max-width: 524px;
+      }
+    }
+  }
+
+}

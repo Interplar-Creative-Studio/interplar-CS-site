@@ -10,10 +10,14 @@
 @import 'utils/how-we-work';
 @import 'utils/team';
 @import 'utils/our-clients';
+@import 'utils/feedback';
 
 :root {
   font-size: 10px;
   background: $black;
   overflow-x: hidden;
   overflow-y: hidden;
+}
+#app{
+  background: $black;
 }

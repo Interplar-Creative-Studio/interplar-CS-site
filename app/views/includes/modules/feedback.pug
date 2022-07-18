@@ -1,0 +1,76 @@
+section#feedback.feedback
+    .container.feedback__title
+        .row
+            .col-6.col-sm-12.col-md-5.col-lg-5.col-xl-5
+                h1(
+                    data-title='обсудим проект?'
+                ) обсудим проект?
+            .d-none.d-md-block.col-md-7.col-lg-7.col-xl-7
+                form.feedback__form
+                    .feedback__form-information
+                        h2 контактные данные
+                        input(
+                            type='text',
+                            placeholder='имя и фамилия',
+                            name='name',
+                        )
+                        input(
+                            type='email',
+                            placeholder='email',
+                            name='email',
+                        )
+                    .feedback__form-text
+                        h2 опишите задачу
+                        textarea(
+                            placeholder='имя и фамилия',
+                            name='text',
+                        )
+                    .feedback__form-file
+                        h2 прикрепите файлы
+                        input(
+                            placeholder='pdf,jpeg,docx,ppt',
+                            accept=".pdf,.jpeg,.docx,.ppt",
+                            name='file',
+                        )
+                    .feedback__form-button
+                        button(
+                            type='submit'
+                        ).button-3
+                            p отправить заявку
+                        span нажимая кнопку отправить заявку, Вы принимаете нашу политику конфиденциальности и даёте согласие на обработку персональных данных.
+section#feedback-mobile.feedback-mobile
+    .container.feedback__block
+        .row
+            .col-12.col-sm-12.d-block.d-sm-block.d-md-none
+                form.feedback__form
+                    .feedback__form-information
+                        h2 контактные данные
+                        input(
+                            type='text',
+                            placeholder='имя и фамилия',
+                            name='name',
+                        )
+                        input(
+                            type='email',
+                            placeholder='email',
+                            name='email',
+                        )
+                    .feedback__form-text
+                        h2 опишите задачу
+                        textarea(
+                            placeholder='максимально подробно',
+                            name='text',
+                        )
+                    .feedback__form-file
+                        h2 прикрепите файлы
+                        input(
+                            placeholder='pdf,jpeg,docx,ppt',
+                            accept=".pdf,.jpeg,.docx,.ppt",
+                            name='file',
+                        )
+                    .feedback__form-button
+                        button(
+                            type='submit'
+                        ).button-3
+                            p отправить&nbsp;заявку
+                        span нажимая кнопку отправить заявку, Вы принимаете нашу политику конфиденциальности и даёте согласие на обработку персональных данных.

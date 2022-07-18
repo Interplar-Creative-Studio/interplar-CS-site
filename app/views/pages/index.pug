@@ -31,6 +31,7 @@ block content
             p создать свой проект
 
 
+
   section#our-cases.our-cases
     .container
       .row
@@ -63,6 +64,7 @@ block content
           a(href="#").button-2
             p ПЕРЕЙТИ В ПОРТФОЛИО
 
+
   section#direction.direction.splide
     .container
       .row
@@ -82,13 +84,14 @@ block content
               li.splide__slide.direction__slide
                 p бизнес-функционал
                 p настраиваем телефонию, кастомные метрики, сбор статистики, создаём бизнес-ботов для Telegram и мессенджеров.
-        .col-0.d-sm-none.d-md-block.col-md-1.col-lg-1.col-xl-2
+        .d-none.d-md-block.col-md-1.col-lg-1.col-xl-2
         .col-6.col-sm-5.col-md-4.col-lg-4.col-xl-3.direction__buttons
           ul.splide__pagination.direction__pagination.splide__pagination--ltr(
             role="tablist",
             aria-label="Select a slide to show",
           )
           .direction__slide-number 01
+
   section#how-we-work.how-we-work
     .container
       .row
@@ -118,6 +121,7 @@ block content
           p 04 // сдача проекта
           p финал. Здесь мы вносим последние правки, а Вы принимаете готовый продукт.
         .d-none.d-xl-block.col-xl-1
+
   section#team.team
     .container
       .row
@@ -138,6 +142,7 @@ block content
       .row
         .col-12.col-sm-12
           hr
+
   section#our-clients.our-clients
     .container
       .row
@@ -174,6 +179,8 @@ block content
             source(media='(min-width: 576px)', srcset='/assets/img/client3-mb.png')
             img(src='/assets/img/client3.png')
           hr
+
+  include ../includes/modules/feedback
 block scripts
   script(src="assets/libs/splide.js")
   script(src="assets/scripts/main.min.js")
