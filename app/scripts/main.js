@@ -109,7 +109,7 @@ whatAreWeDoing.addEventListener('click', () => {
     window.scroll(0, (document.querySelector('.our-cases__description').offsetTop) - 20);
 })
 workProcess.addEventListener('click', () => {
-    window.scroll(0, (document.querySelector('.direction-tittle').offsetTop) - 20);
+    window.scroll(0, (document.querySelector('#direction').offsetTop) - 20);
 })
 ourTeam.addEventListener('click', () => {
     window.scroll(0, (document.querySelector('.team-tittle').offsetTop) - 20);
