@@ -12,11 +12,15 @@
 @import 'utils/our-clients';
 @import 'utils/feedback';
 @import 'utils/contacts';
+@import 'utils/guide';
+@import 'utils/caseLibrary';
 
 :root {
   font-size: 10px;
   background: $black;
+  overflow-x: hidden;
 }
 #app{
   background: $black;
+  width: 100%;
 }

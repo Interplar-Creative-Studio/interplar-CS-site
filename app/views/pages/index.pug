@@ -9,6 +9,7 @@ block title
 block content
   include ../includes/modules/pre-header
   include ../includes/modules/menu
+
   #scroller-wrapper
     section#about-us.about-us
         .container
@@ -69,7 +70,7 @@ block content
           .row
             .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
               h2 наше&nbsp;основное направление — это веб-разработка
-          .row.d-flex.flex-sm-row-reverse.flex-md-row-reverse.flex-lg-row-reverse.flex-xl-row-reverse
+          .row.d-flex.flex-sm-row-reverse.flex-md-row-reverse.flex-lg-row-reverse.flex-xl-row-reverse.d-md-none
             .col-6.col-sm-7.col-md-7.col-lg-7.col-xl-7
               hr
               .splide__track.direction__slider
@@ -186,4 +187,5 @@ block content
 block scripts
   script(src="assets/libs/splide.js")
   script(src="assets/libs/SmoothScroll.js")
+  script(src="assets/libs/mainPage.js")
   script(src="assets/scripts/main.min.js")

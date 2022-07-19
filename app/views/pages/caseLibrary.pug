@@ -1,0 +1,68 @@
+extends ../layouts/master
+
+block title
+    link(rel="stylesheet", href="assets/libs/splide.min.css")
+    link(rel="stylesheet", href="assets/libs/SmoothScroll.css")
+    link(rel="stylesheet", href="assets/css/styles.min.css")
+
+
+block content
+    include ../includes/modules/pre-header
+    include ../includes/modules/menu
+    .guide.case-library-guide
+        .guide__wrapper.last
+            p.guide__last-page 2022&nbsp;©&nbsp;INTERPLAR&nbsp;CREATIVE&nbsp;STUDIO
+            .guide__wrappe-img
+                img(
+                    src="assets/img/logo.svg"
+                )
+            p.guide__current-title наши&nbsp;кейсы
+    #scroller-wrapper
+        section#cases-main.cases-main
+            .container
+                .row.cases-main__title
+                    .col-6
+                        h1(
+                            data-title='НАШИ кейсы'
+                        ) НАШИ кейсы
+                    .col-6
+                        h2 здесь мы храним завершенные нами проекты
+                .row.cases-main__block.justify-content-between
+                    .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5
+                        a(href="#").cases-main__block-unit.cases-main__block-unit-narrow
+                            .cases-main__image-wrapper
+                                img(
+                                    src="assets/img/case.png"
+                                )
+                            p Belle YOU
+                    .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
+                        a(href="#").cases-main__block-unit.cases-main__block-unit-last
+                            .cases-main__image-wrapper
+                                img(
+                                    src="assets/img/case.png"
+                                )
+                            p ООО «КХЧ»
+                    .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
+                        a(href="#").cases-main__block-unit
+                            .cases-main__image-wrapper
+                                img(
+                                    src="assets/img/case.png"
+                                )
+                            p Jinsilin
+                    .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5
+                        a(href="#").cases-main__block-unit.cases-main__block-unit-narrow.cases-main__block-unit-last
+                            .cases-main__image-wrapper
+                                img(
+                                    src="assets/img/case.png"
+                                )
+                            p CR8 Production
+
+
+        include ../includes/modules/feedback
+        include ../includes/modules/contacts
+
+block scripts
+    script(src="assets/libs/splide.js")
+    script(src="assets/libs/SmoothScroll.js")
+    script(src="assets/libs/caseLibrary.js")
+    script(src="assets/scripts/main.min.js")
