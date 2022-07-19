@@ -1,0 +1,129 @@
+extends ../layouts/master
+
+block title
+    link(rel="stylesheet", href="assets/libs/splide.min.css")
+    link(rel="stylesheet", href="assets/libs/SmoothScroll.css")
+    link(rel="stylesheet", href="assets/css/styles.min.css")
+
+
+block content
+    include ../includes/modules/pre-header
+    include ../includes/modules/menu
+    .guide.case-page-guide
+        .guide__wrapper.last
+            p.guide__last-page 2022&nbsp;©&nbsp;INTERPLAR&nbsp;CREATIVE&nbsp;STUDIO
+            .guide__wrappe-img
+                img(
+                    src="assets/img/logo.svg"
+                )
+            p.guide__current-title belleyou
+    #scroller-wrapper
+        section#header.header
+            .container
+                .row.header__title.justify-content-between
+                    .col-6
+                        h1(
+                            data-title='BELLEYOU'
+                        ) BELLEYOU
+                    .col-5
+                        h2 веб-разработка
+                .row
+                    .col-12
+                        .header__image
+                            img(
+                                src="assets/img/case.png"
+                            )
+        section#description.description
+            .container
+                .row
+                    .col-12
+                        .description__titel
+                            h2 доработка и развитие сайта для западной аудитории
+                .row.description__information
+                    .d-none.d-sm-block
+                    .col-3
+                        p /клиент/
+                        p Belleyou
+                    .col-3
+                        p /студия/
+                        p INTERPLAR
+                .row.description__task
+                    .col-12
+                        h2 задача проекта:
+                    .col-12
+                        p в силу трудностей работы с Shopify, на котором до этого функционировал сайт, заказчику требовалось срочно перенести магазин на платформу Wordpress.
+
+        section#scroller-mobile.scroller-mobile.d-block.d-sm-none
+            .container
+                .row
+                    .col-12
+                        .scroller-mobile__image
+                            img(
+                                src="assets/img/case.png"
+                            )
+                    .col-12
+                        .scroller-mobile__image
+                            img(
+                                src="assets/img/case.png"
+                            )
+                    .col-12
+                        .scroller-mobile__image
+                            img(
+                                src="assets/img/case.png"
+                            )
+        section#task-solution.task-solution
+            .container
+                .row
+                    .col-12
+                        h2 решение задачи:
+                    .col-12
+                        p оперативно разработали план переноса магазина, подключения его к складу в европе и отладки процесса покупки, и приступили к его выполнению. Помимо самого магазина перенесли также данные всех зарегистрированных пользователей. После завершения основной части работ и успешной проверки работоспособности всех систем предложили заказчику идеи по доработке и развитию продукта.
+        section#facts.facts
+            .container
+                .row
+                    .col-12
+                        h2 факты о проекте:
+                    .col-12
+                        p так в дополнение к основному фронту работ мы провели оценку сайта по соответствующим метрикам для повышения качества продукта и исправили выявленные недостатки. Ещё мы разработали интеграцию с Telegram-ботом, чтобы любой пользователь мог хранить магазин прямо у себя в мессенджере.
+        section#terms.terms
+            .container
+                .row
+                    .col-12
+                        h1(
+                            data-title='1'
+                        ) 1
+                    .col-12.terms__description
+                        h2 месяц
+                        p на перенос магазина на новую платформу без потери данных
+                .row
+                    .col-12
+                        h1(
+                            data-title='3'
+                        ) 3
+                    .col-12.terms__description
+                        h2 задачи
+                        p выполнены в дополнение к основным, которые повысили качество
+
+
+
+        section#result.result
+            .container
+                .row
+                    .col-12
+                        hr
+                .row.result__description
+                    .col-12
+                        h2 итоги работы:
+                    .col-12
+                        p за один месяц мы перенесли магазин на новую платформу без потери данных зарегистрированных пользователей и полностью настроили его работу. Проявили инициативу и дополнительно к основной задаче доработали продукт, создали интеграцию в Telegram. По итогу команда получила качественный продукт и положительный отзыв от клиента.
+                .row
+                    .col-12
+                        hr
+        include ../includes/modules/feedback
+        include ../includes/modules/contacts
+
+block scripts
+    script(src="assets/libs/splide.js")
+    script(src="assets/libs/SmoothScroll.js")
+    script(src="assets/libs/casePage.js")
+    script(src="assets/scripts/main.min.js")

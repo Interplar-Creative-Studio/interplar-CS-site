@@ -16,27 +16,40 @@ const contactsPosition = document.querySelector('#contacts').offsetTop;
 const guideCurrentNumber = document.querySelector('.guide__current-number');
 const guideCurrentTitle = document.querySelector('.guide__current-title');
 const guideWrapper = document.querySelector('.guide__wrapper');
+const directionSlide = document.querySelectorAll('.direction__animation');
+
 
 new Splide('.splide',{
     arrows: false,
     pagination: true,
-    speed: 2000,
+    speed: 1,
     easing: 0,
     classes: {
         pagination: 'splide__pagination direction__pagination col-6 col-sm-5 col-md-5 col-lg-5 col-xl-5',
     },
 }).mount();
+
 let mutationObserver = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
         let directionActive = document.querySelector('.splide__pagination__page.is-active');
         directionSlideNumber.innerHTML = directionActive.ariaLabel;
+        directionSlide.forEach( slide =>{
+            slide.style.opacity = '0';
+            slide.style.pointerEvents = 'none';
+        });
+        setTimeout(function() {
+            directionSlide.forEach( slide =>{
+                slide.style.opacity = '1';
+                slide.style.pointerEvents = 'auto';
+            });
+        }, 500);
     });
 });
+
 mutationObserver.observe(direction, {
     attributes: true,
     subtree: true,
 });
-
 
 whoAreWe.addEventListener('click', () => {
     window.scroll(0, document.querySelector('#about-us').offsetTop);
@@ -56,7 +69,6 @@ ourClients.addEventListener('click', () => {
 startButton.addEventListener('click', () => {
     window.scroll(0, (document.querySelector('.feedback__title').offsetTop) - 20);
 })
-
 
 window.addEventListener('scroll', function() {
     if(window.scrollY > contactsPosition){

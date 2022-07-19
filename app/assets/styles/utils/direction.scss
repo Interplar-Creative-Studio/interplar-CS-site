@@ -12,6 +12,9 @@
     background: $white;
     margin: 0 0 28px 0;
   }
+  &__animation{
+    transition: $animation;
+  }
   &__slide{
     p:first-child{
       padding: 0 0 15px 0;

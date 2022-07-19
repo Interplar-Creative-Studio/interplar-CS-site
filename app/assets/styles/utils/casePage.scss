@@ -1,0 +1,74 @@
+h2{
+  font-family: $montserrat200;
+}
+.header{
+  padding: 195px 0 0 0;
+  &__image{
+    margin: 42px 0 0 0;
+  }
+}
+.description{
+  padding: 179px 0 0 0;
+
+  &__information{
+    padding: 50px 0 0 0;
+    p:not(:first-child){
+      padding: 10px 0 0 0;
+      font-family: $montserrat300;
+    }
+  }
+  &__task{
+    padding: 200px 0 0 0;
+    p{
+      padding: 14px 0 0 0;
+      font-family: $montserrat200;
+    }
+  }
+}
+.scroller-mobile{
+  padding: 57px 0 0 0;
+  &__image{
+    margin: 0 0 64px 0;
+  }
+}
+.task-solution,.facts{
+  padding: 147px 0 0 0;
+  p{
+    font-family: $montserrat200;
+    padding: 17px 0 0 0;
+  }
+}
+.terms{
+  h1{
+    font-size: 35.2rem;
+    line-height: 100%;
+    font-family: $montserrat200;
+  }
+  &__description{
+    h2{
+      font-size: 1.4rem;
+    }
+    p{
+      padding: 5px 0 0 0;
+      font-family: $montserrat200;
+    }
+  }
+}
+.result{
+  padding: 123px 0 0 0;
+  hr{
+    margin: 0;
+    background: $white;
+    opacity:1;
+    width: 100%;
+  }
+  &__description{
+    padding: 60px 0 75px 0;
+    h2,p{
+      font-family: $montserrat200;
+    }
+    p{
+      padding: 15px 0 0 0;
+    }
+  }
+}
