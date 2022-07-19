@@ -97,6 +97,7 @@ const whatAreWeDoing = document.querySelector('#what-are-we-doing');
 const workProcess = document.querySelector('#work-process');
 const ourTeam = document.querySelector('#our-team');
 const ourClients = document.querySelector('#our-clients');
+const startButton = document.querySelector('.start-button');
 backButton.addEventListener('click', () => {
     window.scroll(0, 0);
 })
@@ -105,14 +106,17 @@ whoAreWe.addEventListener('click', () => {
     window.scroll(0, document.querySelector('#about-us').offsetTop);
 })
 whatAreWeDoing.addEventListener('click', () => {
-    window.scroll(0, (document.querySelector('#our-cases').offsetTop) - 20);
+    window.scroll(0, (document.querySelector('.our-cases__description').offsetTop) - 20);
 })
 workProcess.addEventListener('click', () => {
-    window.scroll(0, (document.querySelector('#direction').offsetTop) - 20);
+    window.scroll(0, (document.querySelector('.direction-tittle').offsetTop) - 20);
 })
 ourTeam.addEventListener('click', () => {
-    window.scroll(0, (document.querySelector('#team').offsetTop) - 20);
+    window.scroll(0, (document.querySelector('.team-tittle').offsetTop) - 20);
 })
 ourClients.addEventListener('click', () => {
-    window.scroll(0, (document.querySelector('.our-clients__title').offsetTop) - 100);
+    window.scroll(0, (document.querySelector('.our-clients__title').offsetTop) - 20);
+})
+startButton.addEventListener('click', () => {
+    window.scroll(0, (document.querySelector('.feedback__title').offsetTop) - 20);
 })
