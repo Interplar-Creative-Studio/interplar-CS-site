@@ -1,11 +1,5 @@
 const direction = document.querySelector('.direction__pagination');
 const directionSlideNumber = document.querySelector('.direction__slide-number')
-const whoAreWe = document.querySelector('#who-are-we');
-const whatAreWeDoing = document.querySelector('#what-are-we-doing');
-const workProcess = document.querySelector('#work-process');
-const ourTeam = document.querySelector('#our-team');
-const ourClients = document.querySelector('#our-clients');
-const startButton = document.querySelector('.start-button');
 const ourCasesPosition = document.querySelector('#our-cases').offsetTop;
 const directionPosition = document.querySelector('#direction').offsetTop;
 const howWeWorkPosition = document.querySelector('#how-we-work').offsetTop;
@@ -51,24 +45,7 @@ mutationObserver.observe(direction, {
     subtree: true,
 });
 
-whoAreWe.addEventListener('click', () => {
-    window.scroll(0, document.querySelector('#about-us').offsetTop);
-})
-whatAreWeDoing.addEventListener('click', () => {
-    window.scroll(0, (document.querySelector('.our-cases__description').offsetTop) - 20);
-})
-workProcess.addEventListener('click', () => {
-    window.scroll(0, (document.querySelector('#direction').offsetTop) - 20);
-})
-ourTeam.addEventListener('click', () => {
-    window.scroll(0, (document.querySelector('.team-tittle').offsetTop) - 20);
-})
-ourClients.addEventListener('click', () => {
-    window.scroll(0, (document.querySelector('.our-clients__title').offsetTop) - 20);
-})
-startButton.addEventListener('click', () => {
-    window.scroll(0, (document.querySelector('.feedback__title').offsetTop) - 20);
-})
+
 
 window.addEventListener('scroll', function() {
     if(window.scrollY > contactsPosition){
@@ -108,7 +85,8 @@ const pageContainer = document.querySelector("#scroller-wrapper");
 /* SMOOTH SCROLL */
 const scroller = new LocomotiveScroll({
     el: pageContainer,
-    smooth: true
+    smooth: true,
+    getDirection: true
 });
 
 scroller.on("scroll", ScrollTrigger.update);

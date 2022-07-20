@@ -9,11 +9,33 @@
     nav.menu__list
         a(href="#").link.menu-link главная
         ul
-            li#who-are-we.menu-link кто мы
-            li#what-are-we-doing.menu-link что мы делаем
-            li#work-process.menu-link процесс работы
-            li#our-team.menu-link наша команда
-            li#our-clients.menu-link наши клиенты
+            li
+                a.menu-link(
+                    href="#about-us"
+                    data-scroll-to
+                ) кто мы
+
+            li
+                a.menu-link(
+                    href="#direction"
+                    data-scroll-to
+                ) что мы делаем
+
+            li
+                a.menu-link(
+                    href="#how-we-work"
+                    data-scroll-to
+                ) процесс работы
+            li
+                a.menu-link(
+                    href="#team"
+                    data-scroll-to
+                ) наша команда
+            li
+                a.menu-link(
+                    href="#our-clients"
+                    data-scroll-to
+                ) наши клиенты
         a(href="http://kram161.ru/interplar/caseLibrary.html").link.menu-link наши кейсы
         a(href="#").link.menu-link ваш проект
         a(href="mailto:mail@htmlacademy.ru").link creative.studio@interplar.com

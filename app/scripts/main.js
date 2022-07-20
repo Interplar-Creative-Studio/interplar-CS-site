@@ -8,14 +8,14 @@ const backButton = document.querySelector('.back-button');
 
 setTimeout(function() {
     preHeaderText.classList.add('pre-header__content-text-active');
-}, 2000);
+}, 1);
 setTimeout(function() {
     preHeader.classList.add('pre-header-hide');
 
-}, 4000);
+}, 1);
 setTimeout(function() {
     preHeader.style.display = "none";
-}, 5000);
+}, 1);
 
 menuBurger.addEventListener('click',() =>{
     menu.classList.toggle('menu-active');
@@ -44,5 +44,16 @@ backButton.addEventListener('click', () => {
     window.scroll(0, 0);
 })
 
+const anchorLinks = document.querySelectorAll('a[href^=\\#]:not([href$=\\#])');
 
+anchorLinks.forEach((anchorLink) => {
+    let hashval = anchorLink.getAttribute('href');
+    let target = document.querySelector(hashval);
 
+    anchorLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+
+        scroller.scrollTo(target);
+    });
+});
