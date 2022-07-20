@@ -133,6 +133,25 @@
       font-size: 4rem;
       line-height: 100%;
     }
+    #sectionPin {
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      left: 0;
+      background: var(--text-color);
+      color: var(--bg-color);
+    }
+
+    .pin-wrap {
+      height: 100vh;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      & > * {
+        min-width: 60vw;
+        padding: 0 5vw;
+      }
+    }
   }
 
 }

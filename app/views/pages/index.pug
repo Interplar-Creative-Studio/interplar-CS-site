@@ -2,7 +2,7 @@ extends ../layouts/master
 
 block title
   link(rel="stylesheet", href="assets/libs/splide.min.css")
-  link(rel="stylesheet", href="assets/libs/SmoothScroll.css")
+  link(rel="stylesheet", href="assets/libs/locomotive-scroll.min.css")
   link(rel="stylesheet", href="assets/css/styles.min.css")
 
 
@@ -74,6 +74,7 @@ block content
                 p ПЕРЕЙТИ В ПОРТФОЛИО
 
 
+
     section#direction.direction.splide
         .container
           .row
@@ -100,6 +101,31 @@ block content
                 aria-label="Select a slide to show",
               )
               .direction__slide-number 01
+
+        .container
+          section#sectionPin
+            .pin-wrap
+              h2 asdasdasd
+              h1(
+                data-title='sdaasdas'
+              ) sdaasdas
+              h2 asdasdasd
+              h1(
+                data-title='sdaasdas'
+              ) sdaasdas
+    section.container-wr
+      .space-holder
+        .sticky
+          .horizontal
+            section.cards(
+              role="feed",
+            )
+              article.sample-card
+              article.sample-card
+              article.sample-card
+              article.sample-card
+              article.sample-card
+              article.sample-card
 
     section#how-we-work.how-we-work
         .container
@@ -195,7 +221,9 @@ block content
     include ../includes/modules/contacts
 
 block scripts
+  script(src="assets/libs/gsap.min.js")
+  script(src="assets/libs/ScrollTrigger.min.js")
+  script(src="assets/libs/locomotive-scroll.min.js")
   script(src="assets/libs/splide.js")
-  script(src="assets/libs/SmoothScroll.js")
   script(src="assets/libs/mainPage.js")
   script(src="assets/scripts/main.min.js")

@@ -2,7 +2,7 @@ extends ../layouts/master
 
 block title
     link(rel="stylesheet", href="assets/libs/splide.min.css")
-    link(rel="stylesheet", href="assets/libs/SmoothScroll.css")
+    link(rel="stylesheet", href="assets/libs/locomotive-scroll.min.css")
     link(rel="stylesheet", href="assets/css/styles.min.css")
 
 
@@ -62,7 +62,9 @@ block content
         include ../includes/modules/contacts
 
 block scripts
+    script(src="assets/libs/gsap.min.js")
+    script(src="assets/libs/ScrollTrigger.min.js")
+    script(src="assets/libs/locomotive-scroll.min.js")
     script(src="assets/libs/splide.js")
-    script(src="assets/libs/SmoothScroll.js")
     script(src="assets/libs/caseLibrary.js")
     script(src="assets/scripts/main.min.js")

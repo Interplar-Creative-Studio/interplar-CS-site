@@ -51,22 +51,7 @@
 }
 @media (min-width:576px){
 
-  .case-library-guide{
-    left: 3px;
-    top: 10%;
-    transform: rotate(-90deg) translateY(-10%);
-    &__wrappe-img{
-      width: 16px;
-    }
-    p{
-      font-size: 1.6rem;
-      line-height: 100%;
-    }
-    .active{
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
+
   .cases-main{
     padding: 157px 0 0 0;
     &__block{
@@ -96,10 +81,7 @@
 }
 @media (min-width:768px){
 
-  .case-library-guide {
-    top: 10%;
-    transform: rotate(-90deg) translateY(-10%);
-  }
+
   .cases-main{
     padding: 186px 0 0 0;
 
@@ -118,10 +100,7 @@
 
 }
 @media (min-width:992px){
-  .case-library-guide {
-    top: 8%;
-    transform: rotate(-90deg) translateY(-8%);
-  }
+
   .cases-main{
     padding: 263px 0 0 0;
 
@@ -141,10 +120,7 @@
 }
 @media (min-width:1200px){
 
-  .case-library-guide {
-    top: 9%;
-    transform: rotate(-90deg) translateY(-9%);
-  }
+
   .cases-main{
     padding: 356px 0 0 0;
 

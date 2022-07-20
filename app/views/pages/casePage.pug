@@ -2,7 +2,7 @@ extends ../layouts/master
 
 block title
     link(rel="stylesheet", href="assets/libs/splide.min.css")
-    link(rel="stylesheet", href="assets/libs/SmoothScroll.css")
+    link(rel="stylesheet", href="assets/libs/locomotive-scroll.min.css")
     link(rel="stylesheet", href="assets/css/styles.min.css")
 
 
@@ -72,6 +72,25 @@ block content
                             img(
                                 src="assets/img/case.png"
                             )
+        .container.d-none.d-sm-block.task-slider
+            section#sectionPin
+                .pin-wrap
+                    picture.task-img
+                        img(
+                            src="assets/img/case.png"
+                        )
+                    picture.task-img
+                        img(
+                            src="assets/img/case.png"
+                        )
+                    picture.task-img
+                        img(
+                            src="assets/img/case.png"
+                        )
+                    picture.task-img
+                        img(
+                            src="assets/img/case.png"
+                        )
         section#task-solution.task-solution
             .container
                 .row
@@ -123,7 +142,9 @@ block content
         include ../includes/modules/contacts
 
 block scripts
+    script(src="assets/libs/gsap.min.js")
+    script(src="assets/libs/ScrollTrigger.min.js")
+    script(src="assets/libs/locomotive-scroll.min.js")
     script(src="assets/libs/splide.js")
-    script(src="assets/libs/SmoothScroll.js")
     script(src="assets/libs/casePage.js")
     script(src="assets/scripts/main.min.js")
