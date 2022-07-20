@@ -46,43 +46,10 @@ mutationObserver.observe(direction, {
 });
 
 
-
-window.addEventListener('scroll', function() {
-    if(window.scrollY > contactsPosition){
-        guideCurrentNumber.innerHTML = '8';
-        guideCurrentTitle.innerHTML = 'Наши&nbsp;контакты';
-        guideWrapper.classList.add('active');
-    }else if(window.scrollY > feedbackPosition){
-        guideCurrentNumber.innerHTML = '7';
-        guideCurrentTitle.innerHTML = 'Ваш проект';
-        guideWrapper.classList.remove('active');
-    }else if(window.scrollY > ourClientsPosition){
-        guideCurrentNumber.innerHTML = '6';
-        guideCurrentTitle.innerHTML = 'Наши клиенты';
-    }else if(window.scrollY > teamPosition){
-        guideCurrentNumber.innerHTML = '5';
-        guideCurrentTitle.innerHTML = 'Команда';
-    }else if(window.scrollY > howWeWorkPosition){
-        guideCurrentNumber.innerHTML = '4';
-        guideCurrentTitle.innerHTML = 'Процесс работы';
-    }else if(window.scrollY > directionPosition){
-        guideCurrentNumber.innerHTML = '3';
-        guideCurrentTitle.innerHTML = 'что мы делаем';
-    }else if(window.scrollY > ourCasesPosition){
-        guideCurrentNumber.innerHTML = '2';
-        guideCurrentTitle.innerHTML = 'Наши кейсы';
-    }else{
-        guideCurrentNumber.innerHTML = '1';
-        guideCurrentTitle.innerHTML = 'Кто мы';
-    }
-});
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 const pageContainer = document.querySelector("#scroller-wrapper");
 
-/* SMOOTH SCROLL */
 const scroller = new LocomotiveScroll({
     el: pageContainer,
     smooth: true,
@@ -108,23 +75,19 @@ ScrollTrigger.scrollerProxy(pageContainer, {
     pinType: pageContainer.style.transform ? "transform" : "fixed"
 });
 
-////////////////////////////////////
-////////////////////////////////////
+
 window.addEventListener("load", function () {
     let pinBoxes = document.querySelectorAll(".pin-wrap > *");
     let pinWrap = document.querySelector(".pin-wrap");
     let pinWrapWidth = pinWrap.offsetWidth;
     let horizontalScrollLength = pinWrapWidth - window.innerWidth;
 
-    // Pinning and horizontal scrolling
-
     gsap.to(".pin-wrap", {
         scrollTrigger: {
-            scroller: pageContainer, //locomotive-scroll
+            scroller: pageContainer,
             scrub: true,
             trigger: "#sectionPin",
             pin: true,
-            // anticipatePin: 1,
             start: "top top",
             end: pinWrapWidth
         },
@@ -135,4 +98,90 @@ window.addEventListener("load", function () {
     ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
 
     ScrollTrigger.refresh();
+});
+
+scroller.on('scroll', (args) => {
+    if(typeof args.currentElements['about-us'] === 'object') {
+        let progress = args.currentElements['our-cases'].progress;
+        console.log(progress)
+        if(progress >= 0 && progress < 0.3){
+            guideCurrentNumber.innerHTML = '1';
+            guideCurrentTitle.innerHTML = 'Кто мы';
+        }else{
+            guideCurrentNumber.innerHTML = '2';
+            guideCurrentTitle.innerHTML = 'Наши кейсы';
+        }
+    }else if(typeof args.currentElements['our-cases'] === 'object'){
+        let progress = args.currentElements['our-cases'].progress;
+        if(progress > 0.1){
+            guideCurrentNumber.innerHTML = '2';
+            guideCurrentTitle.innerHTML = 'Наши кейсы';
+        }else{
+            guideCurrentNumber.innerHTML = '1';
+            guideCurrentTitle.innerHTML = 'Кто мы';
+        }
+    }else if(typeof args.currentElements['direction'] === 'object'){
+        let progress = args.currentElements['direction'].progress;
+        if(progress > 0.1){
+            guideCurrentNumber.innerHTML = '3';
+            guideCurrentTitle.innerHTML = 'что мы делаем';
+        }else{
+            guideCurrentNumber.innerHTML = '2';
+            guideCurrentTitle.innerHTML = 'Наши кейсы';
+        }
+    }else if(typeof args.currentElements['how-we-work'] === 'object') {
+        let progress = args.currentElements['how-we-work'].progress;
+
+        if (progress > 0.1 && progress < 0.7) {
+            guideCurrentNumber.innerHTML = '4';
+            guideCurrentTitle.innerHTML = 'Процесс работы';
+        }else if(progress > 0.7){
+            guideCurrentNumber.innerHTML = '5';
+            guideCurrentTitle.innerHTML = 'Команда';
+        }
+        else {
+            guideCurrentNumber.innerHTML = '3';
+            guideCurrentTitle.innerHTML = 'что мы делаем';
+        }
+    }else if(typeof args.currentElements['team'] === 'object'){
+        let progress = args.currentElements['team'].progress;
+        if(progress > 0.1){
+            guideCurrentNumber.innerHTML = '5';
+            guideCurrentTitle.innerHTML = 'Команда';
+        }else{
+            guideCurrentNumber.innerHTML = '4';
+            guideCurrentTitle.innerHTML = 'Процесс работы';
+        }
+    }else if(typeof args.currentElements['our-clients'] === 'object'){
+        let progress = args.currentElements['our-clients'].progress;
+        if(progress > 0.1){
+            guideCurrentNumber.innerHTML = '6';
+            guideCurrentTitle.innerHTML = 'Наши клиенты';
+        }else{
+            guideCurrentNumber.innerHTML = '5';
+            guideCurrentTitle.innerHTML = 'Команда';
+        }
+    }else if(typeof args.currentElements['feedback'] === 'object'){
+        let progress = args.currentElements['feedback'].progress;
+        if(progress > 0.1){
+            guideCurrentNumber.innerHTML = '7';
+            guideCurrentTitle.innerHTML = 'Ваш проект';
+            guideWrapper.classList.remove('active');
+        }else{
+            guideCurrentNumber.innerHTML = '6';
+            guideCurrentTitle.innerHTML = 'Наши клиенты';
+        }
+    }
+    else if(typeof args.currentElements['contacts'] === 'object'){
+        let progress = args.currentElements['contacts'].progress;
+        if(progress > 0.1){
+            guideCurrentNumber.innerHTML = '8';
+            guideCurrentTitle.innerHTML = 'Наши&nbsp;контакты';
+            guideWrapper.classList.add('active');
+        }else{
+            guideCurrentNumber.innerHTML = '7';
+            guideCurrentTitle.innerHTML = 'Ваш проект';
+            guideWrapper.classList.remove('active');
+        }
+    }
 });

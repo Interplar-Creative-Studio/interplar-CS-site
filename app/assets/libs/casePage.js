@@ -1,26 +1,11 @@
 const guideCurrentTitle = document.querySelector('.guide__current-title');
 const guideWrapper = document.querySelector('.guide__wrapper');
-const feedbackPosition = document.querySelector('#feedback').offsetTop;
-const contactsPosition = document.querySelector('#contacts').offsetTop;
 
-
-window.addEventListener('scroll', function() {
-    if(window.scrollY > contactsPosition - 140){
-        guideCurrentTitle.innerHTML = 'Наши&nbsp;контакты';
-        guideWrapper.classList.add('active');
-    }else if(window.scrollY > feedbackPosition){
-        guideCurrentTitle.innerHTML = 'Ваш проект';
-        guideWrapper.classList.remove('active');
-    }else{
-        guideCurrentTitle.innerHTML = 'belleyou';
-    }
-});
 
 gsap.registerPlugin(ScrollTrigger);
 
 const pageContainer = document.querySelector("#scroller-wrapper");
 
-/* SMOOTH SCROLL */
 const scroller = new LocomotiveScroll({
     el: pageContainer,
     smooth: true
@@ -70,4 +55,46 @@ window.addEventListener("load", function () {
     ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
 
     ScrollTrigger.refresh();
+});
+
+window.addEventListener('scroll', function() {
+    if(window.scrollY > contactsPosition - 140){
+        guideCurrentTitle.innerHTML = 'Наши&nbsp;контакты';
+        guideWrapper.classList.add('active');
+    }else if(window.scrollY > feedbackPosition){
+        guideCurrentTitle.innerHTML = 'Ваш проект';
+        guideWrapper.classList.remove('active');
+    }else{
+        guideCurrentTitle.innerHTML = 'belleyou';
+    }
+});
+
+scroller.on('scroll', (args) => {
+    if(typeof args.currentElements['header'] === 'object') {
+        let progress = args.currentElements['header'].progress;
+        console.log(progress)
+        if(progress >= 0){
+            guideCurrentTitle.innerHTML = 'belleyou';
+        }else{
+            guideCurrentTitle.innerHTML = 'Ваш проект';
+        }
+    }else if(typeof args.currentElements['feedback'] === 'object'){
+        let progress = args.currentElements['feedback'].progress;
+        if(progress >= 0.1){
+            guideCurrentTitle.innerHTML = 'Ваш проект';
+            guideWrapper.classList.remove('active');
+        }else{
+            guideCurrentTitle.innerHTML = 'belleyou';
+        }
+    }
+    else if(typeof args.currentElements['contacts'] === 'object'){
+        let progress = args.currentElements['contacts'].progress;
+        if(progress > 0.1){
+            guideCurrentTitle.innerHTML = 'Наши&nbsp;контакты';
+            guideWrapper.classList.add('active');
+        }else{
+            guideCurrentTitle.innerHTML = 'Ваш проект';
+            guideWrapper.classList.remove('active');
+        }
+    }
 });
