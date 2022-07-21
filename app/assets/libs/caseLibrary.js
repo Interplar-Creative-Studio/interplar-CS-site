@@ -34,7 +34,6 @@ ScrollTrigger.scrollerProxy(pageContainer, {
 scroller.on('scroll', (args) => {
     if(typeof args.currentElements['cases-main'] === 'object') {
         let progress = args.currentElements['cases-main'].progress;
-        console.log(progress)
         if(progress >= 0){
             guideCurrentTitle.innerHTML = 'наши кейсы';
         }else{

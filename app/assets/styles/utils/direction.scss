@@ -112,7 +112,7 @@
   .direction{
     padding: 150px 0 0 0;
     h2{
-      padding: 0 0 162px 0;
+      padding: 0;
     }
     hr{
       width: 100vw;
@@ -140,18 +140,21 @@
       left: 0;
       background: var(--text-color);
       color: var(--bg-color);
+      position: relative;
     }
 
     .pin-wrap {
       height: 100vh;
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
-      & > * {
-        min-width: 60vw;
-        padding: 0 5vw;
-      }
     }
+    &__desktop-title{
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
   }
 
 }
@@ -159,9 +162,6 @@
 
   .direction{
     padding: 200px 0 0 0;
-    h2{
-      padding: 0 0 120px 0;
-    }
     hr{
       margin: 0 0 64px 0;
     }
@@ -178,6 +178,9 @@
       font-size: 5.6rem;
       line-height: 100%;
     }
+    &__desktop-title{
+      max-width: 864px;
+    }
   }
 
 }
@@ -185,9 +188,6 @@
 
   .direction{
     padding: 245px 0 0 0;
-    h2{
-      padding: 0 0 120px 0;
-    }
     hr{
       margin: 0 0 72px 0;
     }
@@ -208,6 +208,45 @@
       top: 70px;
       font-size: 6.3rem;
       line-height: 100%;
+    }
+    &__desktop-title{
+      max-width: 1040px;
+    }
+    &__desktop-unit{
+      display: flex;
+      border: 1px solid $white;
+      box-sizing: border-box;
+      width: 1120px;
+      margin: 0 20px 0 0;
+      &__number{
+        border-right: 1px solid $white;
+        padding: 40px 100px 40px 88px;
+        box-sizing: border-box;
+      }
+      &__text{
+        display: flex;
+        padding: 40px 30px 40px 170px;
+        box-sizing: border-box;
+        p:first-child{
+          width: 216px;
+          font-family: $montserrat400;
+        }
+        p:not(:first-child){
+          font-family: $montserrat300;
+          width: 338px;
+        }
+      }
+    }
+  }
+
+}
+@media (min-width:1400px){
+
+  .direction{
+
+    &__desktop-unit{
+      width: 1300px;
+      margin: 0 20px 0 0;
     }
   }
 

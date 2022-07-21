@@ -29,33 +29,57 @@ ScrollTrigger.scrollerProxy(pageContainer, {
     },
     pinType: pageContainer.style.transform ? "transform" : "fixed"
 });
+if (document.documentElement.clientWidth < 1400 ) {
 
-window.addEventListener("load", function () {
-    let pinBoxes = document.querySelectorAll(".pin-wrap > *");
-    let pinWrap = document.querySelector(".pin-wrap");
-    let pinWrapWidth = pinWrap.offsetWidth;
-    let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+    window.addEventListener("load", function () {
+        let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+        let pinWrap = document.querySelector(".pin-wrap");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        let horizontalScrollLength = pinWrapWidth - "1140" ;
 
-    // Pinning and horizontal scrolling
+        gsap.to(".pin-wrap", {
+            scrollTrigger: {
+                scroller: pageContainer,
+                scrub: true,
+                trigger: "#sectionPin",
+                pin: true,
+                start: "top top",
+                end: '2000'
+            },
+            x: -horizontalScrollLength,
+            ease: "none"
+        });
 
-    gsap.to(".pin-wrap", {
-        scrollTrigger: {
-            scroller: pageContainer, //locomotive-scroll
-            scrub: true,
-            trigger: "#sectionPin",
-            pin: true,
-            // anticipatePin: 1,
-            start: "top top",
-            end: pinWrapWidth
-        },
-        x: -horizontalScrollLength,
-        ease: "none"
+        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+        ScrollTrigger.refresh();
     });
 
-    ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+} else if(document.documentElement.clientWidth >= 1400){
+    window.addEventListener("load", function () {
+        let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+        let pinWrap = document.querySelector(".pin-wrap");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        let horizontalScrollLength = pinWrapWidth - "1320" ;
 
-    ScrollTrigger.refresh();
-});
+        gsap.to(".pin-wrap", {
+            scrollTrigger: {
+                scroller: pageContainer,
+                scrub: true,
+                trigger: "#sectionPin",
+                pin: true,
+                start: "top top",
+                end: '2000'
+            },
+            x: -horizontalScrollLength,
+            ease: "none"
+        });
+
+        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+        ScrollTrigger.refresh();
+    });
+}
 
 window.addEventListener('scroll', function() {
     if(window.scrollY > contactsPosition - 140){
@@ -72,7 +96,6 @@ window.addEventListener('scroll', function() {
 scroller.on('scroll', (args) => {
     if(typeof args.currentElements['header'] === 'object') {
         let progress = args.currentElements['header'].progress;
-        console.log(progress)
         if(progress >= 0){
             guideCurrentTitle.innerHTML = 'belleyou';
         }else{

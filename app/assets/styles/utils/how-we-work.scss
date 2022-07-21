@@ -42,7 +42,7 @@
 @media (min-width:768px){
 
   .how-we-work {
-    padding: 130px 0 0 0;
+    padding: 0;
     h1{
       padding: 0 0 75px 0;
     }
@@ -60,7 +60,6 @@
 @media (min-width:992px){
 
   .how-we-work {
-    padding: 190px 0 0 0;
     h1{
       padding: 0 0 90px 0;
     }
@@ -78,7 +77,6 @@
 @media (min-width:1200px){
 
   .how-we-work {
-    padding: 240px 0 0 0;
     &__block-unit {
       p:not(:last-child) {
         padding: 60px 0 15px 0;
