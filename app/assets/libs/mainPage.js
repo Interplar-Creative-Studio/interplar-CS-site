@@ -46,6 +46,35 @@ mutationObserver.observe(direction, {
 });
 
 
+gsap.registerPlugin(ScrollTrigger);
+
+const pageContainer = document.querySelector("#scroller-wrapper");
+
+const scroller = new LocomotiveScroll({
+    el: pageContainer,
+    smooth: true,
+    getDirection: true
+});
+
+scroller.on("scroll", ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy(pageContainer, {
+    scrollTop(value) {
+        return arguments.length
+            ? scroller.scrollTo(value, 0, 0)
+            : scroller.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+        return {
+            left: 0,
+            top: 0,
+            width: window.innerWidth,
+            height: window.innerHeight
+        };
+    },
+    pinType: pageContainer.style.transform ? "transform" : "fixed"
+});
+
 if (document.documentElement.clientWidth < 1400 ) {
 
     window.addEventListener("load", function () {
@@ -97,7 +126,6 @@ if (document.documentElement.clientWidth < 1400 ) {
         ScrollTrigger.refresh();
     });
 }
-
 
 scroller.on('scroll', (args) => {
     if(typeof args.currentElements['about-us'] === 'object') {
