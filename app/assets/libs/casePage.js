@@ -36,8 +36,6 @@ window.addEventListener("load", function () {
     let pinWrapWidth = pinWrap.offsetWidth;
     let horizontalScrollLength = pinWrapWidth - window.innerWidth;
 
-    // Pinning and horizontal scrolling
-
     gsap.to(".pin-wrap", {
         scrollTrigger: {
             scroller: pageContainer, //locomotive-scroll
@@ -57,43 +55,30 @@ window.addEventListener("load", function () {
     ScrollTrigger.refresh();
 });
 
-window.addEventListener('scroll', function() {
-    if(window.scrollY > contactsPosition - 140){
-        guideCurrentTitle.innerHTML = 'Наши&nbsp;контакты';
-        guideWrapper.classList.add('active');
-    }else if(window.scrollY > feedbackPosition){
-        guideCurrentTitle.innerHTML = 'Ваш проект';
-        guideWrapper.classList.remove('active');
-    }else{
-        guideCurrentTitle.innerHTML = 'belleyou';
-    }
-});
 
-scroller.on('scroll', (args) => {
-    if(typeof args.currentElements['header'] === 'object') {
-        let progress = args.currentElements['header'].progress;
-        if(progress >= 0){
-            guideCurrentTitle.innerHTML = 'belleyou';
-        }else{
-            guideCurrentTitle.innerHTML = 'Ваш проект';
+if (document.documentElement.clientWidth >= 576) {
+    scroller.on('scroll', (args) => {
+        if (typeof args.currentElements['header'] === 'object') {
+            if (args.currentElements['header'].progress >= 0) {
+                guideCurrentTitle.innerHTML = 'belleyou';
+            } else {
+                guideCurrentTitle.innerHTML = 'Ваш проект';
+            }
+        } else if (typeof args.currentElements['feedback'] === 'object') {
+            if (args.currentElements['feedback'].progress >= 0.1) {
+                guideCurrentTitle.innerHTML = 'Ваш проект';
+                guideWrapper.classList.remove('active');
+            } else {
+                guideCurrentTitle.innerHTML = 'belleyou';
+            }
+        } else if (typeof args.currentElements['contacts'] === 'object') {
+            if (args.currentElements['contacts'].progress > 0.1) {
+                guideCurrentTitle.innerHTML = 'Наши&nbsp;контакты';
+                guideWrapper.classList.add('active');
+            } else {
+                guideCurrentTitle.innerHTML = 'Ваш проект';
+                guideWrapper.classList.remove('active');
+            }
         }
-    }else if(typeof args.currentElements['feedback'] === 'object'){
-        let progress = args.currentElements['feedback'].progress;
-        if(progress >= 0.1){
-            guideCurrentTitle.innerHTML = 'Ваш проект';
-            guideWrapper.classList.remove('active');
-        }else{
-            guideCurrentTitle.innerHTML = 'belleyou';
-        }
-    }
-    else if(typeof args.currentElements['contacts'] === 'object'){
-        let progress = args.currentElements['contacts'].progress;
-        if(progress > 0.1){
-            guideCurrentTitle.innerHTML = 'Наши&nbsp;контакты';
-            guideWrapper.classList.add('active');
-        }else{
-            guideCurrentTitle.innerHTML = 'Ваш проект';
-            guideWrapper.classList.remove('active');
-        }
-    }
-});
+    });
+}

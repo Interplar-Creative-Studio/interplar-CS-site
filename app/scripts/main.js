@@ -41,18 +41,27 @@ menuLink.forEach(link =>{
         menu.classList.remove('menu-active');
     })
 })
-popUpButton.addEventListener('click',() =>{
-    popUp.style.display = "none";
-});
-document.addEventListener( 'click', (e) => {
-    let target = e.target;
-    let itsPopUp = target === popUp || popUp.contains(target)
-    let itsPopUpButton = target === popUpButton;
+try {
 
-    if (!itsPopUp && !itsPopUpButton) {
+    popUpButton.addEventListener('click',() =>{
         popUp.style.display = "none";
-    }
-});
+    });
+    document.addEventListener( 'click', (e) => {
+        let target = e.target;
+        let itsPopUp = target === popUp || popUp.contains(target)
+        let itsPopUpButton = target === popUpButton;
+
+        if (!itsPopUp && !itsPopUpButton) {
+            popUp.style.display = "none";
+        }
+    });
+
+} catch (err) {
+
+    // Убрать try catch когда popUp будет настроен
+
+}
+
 
 backButton.addEventListener('click', () => {
     window.scroll(0, 0);
