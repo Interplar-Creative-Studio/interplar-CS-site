@@ -1,0 +1,74 @@
+.popUp{
+  position: fixed;
+  z-index:5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 328px;
+  width: fit-content;
+  padding: 64px 50px 72px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: $black;
+  border: 1px solid $white;
+  box-sizing: border-box;
+  p:first-child{
+    font-family: $montserrat400;
+  }
+  p:not(:first-child){
+    font-family: $montserrat300;
+    padding: 10px 0 0 0;
+  }
+  &__button{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    top: 32px;
+    right: 24px;
+    span{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      content: '';
+      background: $white;
+      width: 16px;
+      height: 1px;
+      transform: rotate(-45deg)
+    }
+    span:not(:first-child){
+      transform: rotate(45deg)
+    }
+  }
+}
+
+@media (min-width: 576px){
+  .popUp{
+    max-width: 424px;
+    padding: 96px 56px 100px 56px;
+    &__button{
+      top: 32px;
+      right: 40px;
+    }
+  }
+}
+@media (min-width: 768px){
+  .popUp{
+    max-width: 504px;
+    padding: 104px 72px 106px 72px;
+  }
+}
+@media (min-width: 992px){
+  .popUp{
+    max-width: 696px;
+    padding: 102px 88px 127px 72px;
+    p:not(:first-child){
+      padding: 16px 0 0 0;
+    }
+    &__button{
+      right: 56px;
+    }
+  }
+}

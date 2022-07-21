@@ -5,6 +5,8 @@ const menuButton = document.querySelector('.menu__button');
 const menu = document.querySelector('.menu')
 const menuLink = document.querySelectorAll('.menu-link')
 const backButton = document.querySelector('.back-button');
+const popUpButton = document.querySelector('.popUp__button');
+const popUp = document.querySelector('.popUp');
 
 setTimeout(function() {
     preHeaderText.classList.add('pre-header__content-text-active');
@@ -39,6 +41,18 @@ menuLink.forEach(link =>{
         menu.classList.remove('menu-active');
     })
 })
+popUpButton.addEventListener('click',() =>{
+    popUp.style.display = "none";
+});
+document.addEventListener( 'click', (e) => {
+    let target = e.target;
+    let itsPopUp = target === popUp || popUp.contains(target)
+    let itsPopUpButton = target === popUpButton;
+
+    if (!itsPopUp && !itsPopUpButton) {
+        popUp.style.display = "none";
+    }
+});
 
 backButton.addEventListener('click', () => {
     window.scroll(0, 0);
