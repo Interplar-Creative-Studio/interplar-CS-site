@@ -46,34 +46,57 @@ mutationObserver.observe(direction, {
 });
 
 
-gsap.registerPlugin(ScrollTrigger);
+if (document.documentElement.clientWidth < 1400 ) {
 
-const pageContainer = document.querySelector("#scroller-wrapper");
+    window.addEventListener("load", function () {
+        let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+        let pinWrap = document.querySelector(".pin-wrap");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        let horizontalScrollLength = pinWrapWidth - "1140" ;
 
-const scroller = new LocomotiveScroll({
-    el: pageContainer,
-    smooth: true,
-    getDirection: true
-});
+        gsap.to(".pin-wrap", {
+            scrollTrigger: {
+                scroller: pageContainer,
+                scrub: true,
+                trigger: "#sectionPin",
+                pin: true,
+                start: "top top",
+                end: '2000'
+            },
+            x: -horizontalScrollLength,
+            ease: "none"
+        });
 
-scroller.on("scroll", ScrollTrigger.update);
+        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
 
-ScrollTrigger.scrollerProxy(pageContainer, {
-    scrollTop(value) {
-        return arguments.length
-            ? scroller.scrollTo(value, 0, 0)
-            : scroller.scroll.instance.scroll.y;
-    },
-    getBoundingClientRect() {
-        return {
-            left: 0,
-            top: 0,
-            width: window.innerWidth,
-            height: window.innerHeight
-        };
-    },
-    pinType: pageContainer.style.transform ? "transform" : "fixed"
-});
+        ScrollTrigger.refresh();
+    });
+
+} else if(document.documentElement.clientWidth >= 1400){
+    window.addEventListener("load", function () {
+        let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+        let pinWrap = document.querySelector(".pin-wrap");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        let horizontalScrollLength = pinWrapWidth - "1320" ;
+
+        gsap.to(".pin-wrap", {
+            scrollTrigger: {
+                scroller: pageContainer,
+                scrub: true,
+                trigger: "#sectionPin",
+                pin: true,
+                start: "top top",
+                end: '2000'
+            },
+            x: -horizontalScrollLength,
+            ease: "none"
+        });
+
+        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+        ScrollTrigger.refresh();
+    });
+}
 
 
 scroller.on('scroll', (args) => {

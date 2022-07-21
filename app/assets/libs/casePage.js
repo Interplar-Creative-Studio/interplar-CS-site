@@ -29,57 +29,33 @@ ScrollTrigger.scrollerProxy(pageContainer, {
     },
     pinType: pageContainer.style.transform ? "transform" : "fixed"
 });
-if (document.documentElement.clientWidth < 1400 ) {
 
-    window.addEventListener("load", function () {
-        let pinBoxes = document.querySelectorAll(".pin-wrap > *");
-        let pinWrap = document.querySelector(".pin-wrap");
-        let pinWrapWidth = pinWrap.offsetWidth;
-        let horizontalScrollLength = pinWrapWidth - "1140" ;
+window.addEventListener("load", function () {
+    let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+    let pinWrap = document.querySelector(".pin-wrap");
+    let pinWrapWidth = pinWrap.offsetWidth;
+    let horizontalScrollLength = pinWrapWidth - window.innerWidth;
 
-        gsap.to(".pin-wrap", {
-            scrollTrigger: {
-                scroller: pageContainer,
-                scrub: true,
-                trigger: "#sectionPin",
-                pin: true,
-                start: "top top",
-                end: '2000'
-            },
-            x: -horizontalScrollLength,
-            ease: "none"
-        });
+    // Pinning and horizontal scrolling
 
-        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
-
-        ScrollTrigger.refresh();
+    gsap.to(".pin-wrap", {
+        scrollTrigger: {
+            scroller: pageContainer, //locomotive-scroll
+            scrub: true,
+            trigger: "#sectionPin",
+            pin: true,
+            // anticipatePin: 1,
+            start: "top top",
+            end: pinWrapWidth
+        },
+        x: -horizontalScrollLength,
+        ease: "none"
     });
 
-} else if(document.documentElement.clientWidth >= 1400){
-    window.addEventListener("load", function () {
-        let pinBoxes = document.querySelectorAll(".pin-wrap > *");
-        let pinWrap = document.querySelector(".pin-wrap");
-        let pinWrapWidth = pinWrap.offsetWidth;
-        let horizontalScrollLength = pinWrapWidth - "1320" ;
+    ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
 
-        gsap.to(".pin-wrap", {
-            scrollTrigger: {
-                scroller: pageContainer,
-                scrub: true,
-                trigger: "#sectionPin",
-                pin: true,
-                start: "top top",
-                end: '2000'
-            },
-            x: -horizontalScrollLength,
-            ease: "none"
-        });
-
-        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
-
-        ScrollTrigger.refresh();
-    });
-}
+    ScrollTrigger.refresh();
+});
 
 window.addEventListener('scroll', function() {
     if(window.scrollY > contactsPosition - 140){
