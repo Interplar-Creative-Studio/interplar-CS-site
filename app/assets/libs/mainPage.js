@@ -75,7 +75,7 @@ ScrollTrigger.scrollerProxy(pageContainer, {
     pinType: pageContainer.style.transform ? "transform" : "fixed"
 });
 
-if (document.documentElement.clientWidth < 1400 ) {
+if (document.documentElement.clientWidth < 1400 && document.documentElement.clientWidth >= 1200 ) {
 
     window.addEventListener("load", function () {
         let pinBoxes = document.querySelectorAll(".pin-wrap > *");
@@ -125,8 +125,32 @@ if (document.documentElement.clientWidth < 1400 ) {
 
         ScrollTrigger.refresh();
     });
-}
 
+}else if(document.documentElement.clientWidth <= 1199){
+    window.addEventListener("load", function () {
+        let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+        let pinWrap = document.querySelector(".pin-wrap");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        let horizontalScrollLength = pinWrapWidth - "960" ;
+
+        gsap.to(".pin-wrap", {
+            scrollTrigger: {
+                scroller: pageContainer,
+                scrub: true,
+                trigger: "#sectionPin",
+                pin: true,
+                start: "top top",
+                end: '2000'
+            },
+            x: -horizontalScrollLength,
+            ease: "none"
+        });
+
+        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+        ScrollTrigger.refresh();
+    });
+}
 scroller.on('scroll', (args) => {
     if(typeof args.currentElements['about-us'] === 'object') {
         let progress = args.currentElements['our-cases'].progress;

@@ -30,10 +30,13 @@ section#feedback.feedback(
                         )
                     .feedback__form-file
                         h2 прикрепите файлы
-                        input(
-                            placeholder='pdf,jpeg,docx,ppt',
+                        label(
+                            for="file"
+                        ) pdf,jpeg,docx,ppt
+                        input#file(
                             accept=".pdf,.jpeg,.docx,.ppt",
                             name='file',
+                            type="file"
                         )
                     .feedback__form-button
                         button(
@@ -66,11 +69,13 @@ section#feedback-mobile.feedback-mobile
                         )
                     .feedback__form-file
                         h2 прикрепите файлы
-                        input(
-                            type='file',
-                            placeholder='pdf,jpeg,docx,ppt',
+                        label(
+                            for="file-mobile"
+                        ) pdf,jpeg,docx,ppt
+                        input#file-mobile(
                             accept=".pdf,.jpeg,.docx,.ppt",
                             name='file',
+                            type="file"
                         )
                     .feedback__form-button
                         button(

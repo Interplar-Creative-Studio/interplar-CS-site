@@ -81,6 +81,10 @@
     height: 100%;
     transition: $animation;
     z-index: 2;
+    .menu-link{
+      text-decoration: none;
+      color: $black;
+    }
     .link{
       color: $black;
       font-weight: 400;
@@ -167,6 +171,7 @@
   }
   .menu__list{
     right: 0;
+
   }
 }
 
@@ -246,8 +251,7 @@
       .menu-link{
         font-size: 3.2rem;
         line-height: 3.9rem;
-        text-decoration: none;
-        color: $black;
+
       }
       ul{
         .menu-link{

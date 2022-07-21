@@ -51,8 +51,22 @@
     }
     &-file{
       padding: 43px 0 0 0;
-      input{
+      display: flex;
+      flex-direction: column;
+      label{
+        padding: 16px;
+        background: $white;
+        box-sizing: border-box;
+        border: 1px solid $black;
+        font-size: 1.4rem;
+        cursor: pointer;
+        max-width: 328px;
         margin: 29px 0 0 0;
+      }
+      input{
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
       }
     }
     &-button{
@@ -103,7 +117,9 @@
       }
       &-file{
         padding: 12px 0 0 0;
-        input{
+        label{
+          padding: 8px 24px;
+          max-width: 344px;
           margin: 12px 0 0 0;
         }
       }
@@ -152,8 +168,9 @@
       }
       &-file{
         padding: 26px 0 0 0;
-        input{
+        label{
           margin: 14px 0 0 0;
+          font-size: 1.6rem;
         }
       }
       &-button{
@@ -190,8 +207,11 @@
       }
       &-file{
         padding: 30px 0 0 0;
-        input{
+        label{
           margin: 17px 0 0 0;
+          font-size: 2.4rem;
+          max-width: 512px;
+          padding: 12px 0 12px 21px;
         }
       }
       &-button{
@@ -248,7 +268,7 @@
       }
       &-file{
         padding: 37px 0 0 0;
-        input{
+        label{
           margin: 32px 0 0 0;
         }
       }
