@@ -1,7 +1,5 @@
 const direction = document.querySelector('.direction__pagination');
 const directionSlideNumber = document.querySelector('.direction__slide-number')
-const feedbackPosition = document.querySelector('#feedback').offsetTop;
-const contactsPosition = document.querySelector('#contacts').offsetTop;
 const guideCurrentNumber = document.querySelector('.guide__current-number');
 const guideCurrentTitle = document.querySelector('.guide__current-title');
 const guideWrapper = document.querySelector('.guide__wrapper');

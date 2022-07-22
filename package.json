@@ -63,6 +63,7 @@
 	"dependencies": {
 		"glob-parent": "^6.0.2",
 		"gulp-html-beautify": "^1.0.1",
+		"imagesloaded": "^5.0.0",
 		"uncss": "^0.17.3"
 	},
 	"overrides": {
