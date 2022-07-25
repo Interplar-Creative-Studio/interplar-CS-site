@@ -72,7 +72,8 @@ html.has-scroll-dragging {
     position: absolute;
     right: 0;
     top: 0;
-    width: 7px
+    width: 7px;
+    mix-blend-mode: difference;
 }
 
 .has-scroll-dragging .c-scrollbar_thumb {

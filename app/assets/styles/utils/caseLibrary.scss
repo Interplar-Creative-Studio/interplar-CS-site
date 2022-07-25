@@ -87,12 +87,17 @@
 
     &__block{
       padding: 270px 0 0 0;
+      &-second{
+        margin: 56px 0 0 0;
+      }
       &-unit{
-        max-width: 408px;
+        max-width: none;
+        width: 100%;
         height: 408px;
       }
       &-unit-narrow{
-        max-width: 200px;
+        max-width: none;
+        width: 100%;
         height: 408px;
       }
     }
@@ -106,12 +111,13 @@
 
     &__block{
       padding: 355px 0 0 0;
+      &-second{
+        margin: 88px 0 0 0;
+      }
       &-unit{
-        max-width: 488px;
         height: 488px;
       }
       &-unit-narrow{
-        max-width: 264px;
         height: 488px;
       }
     }
@@ -120,18 +126,18 @@
 }
 @media (min-width:1200px){
 
-
   .cases-main{
     padding: 356px 0 0 0;
 
     &__block{
       padding: 424px 0 0 0;
+      &-second{
+        margin: 144px 0 0 0;
+      }
       &-unit{
-        max-width: 600px;
         height: 600px;
       }
       &-unit-narrow{
-        max-width: 336px;
         height: 600px;
       }
     }

@@ -30,30 +30,130 @@ ScrollTrigger.scrollerProxy(pageContainer, {
     pinType: pageContainer.style.transform ? "transform" : "fixed"
 });
 
-window.addEventListener("load", function () {
-    let pinBoxes = document.querySelectorAll(".pin-wrap > *");
-    let pinWrap = document.querySelector(".pin-wrap");
-    let pinWrapWidth = pinWrap.offsetWidth;
-    let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+if (document.documentElement.clientWidth < 1400 && document.documentElement.clientWidth >= 1200 ) {
 
-    gsap.to(".pin-wrap", {
-        scrollTrigger: {
-            scroller: pageContainer, //locomotive-scroll
-            scrub: true,
-            trigger: "#sectionPin",
-            pin: true,
-            // anticipatePin: 1,
-            start: "top top",
-            end: pinWrapWidth
-        },
-        x: -horizontalScrollLength,
-        ease: "none"
+    window.addEventListener("load", function () {
+        let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+        let pinWrap = document.querySelector(".pin-wrap");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        let horizontalScrollLength = pinWrapWidth - "1140" ;
+
+        gsap.to(".pin-wrap", {
+            scrollTrigger: {
+                scroller: pageContainer,
+                scrub: true,
+                trigger: "#sectionPin",
+                pin: true,
+                start: "top top",
+                end: pinWrapWidth
+            },
+            x: -horizontalScrollLength,
+            ease: "none"
+        });
+
+        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+        ScrollTrigger.refresh();
     });
 
-    ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+} else if(document.documentElement.clientWidth >= 1400){
+    window.addEventListener("load", function () {
+        let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+        let pinWrap = document.querySelector(".pin-wrap");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        let horizontalScrollLength = pinWrapWidth - "900" ;
 
-    ScrollTrigger.refresh();
-});
+        gsap.to(".pin-wrap", {
+            scrollTrigger: {
+                scroller: pageContainer,
+                scrub: true,
+                trigger: "#sectionPin",
+                pin: true,
+                start: "top top",
+                end: pinWrapWidth
+            },
+            x: -horizontalScrollLength,
+            ease: "none"
+        });
+
+        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+        ScrollTrigger.refresh();
+    });
+
+}else if(document.documentElement.clientWidth < 1200 && document.documentElement.clientWidth >= 992){
+    window.addEventListener("load", function () {
+        let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+        let pinWrap = document.querySelector(".pin-wrap");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        let horizontalScrollLength = pinWrapWidth - "748" ;
+
+        gsap.to(".pin-wrap", {
+            scrollTrigger: {
+                scroller: pageContainer,
+                scrub: true,
+                trigger: "#sectionPin",
+                pin: true,
+                start: "top top",
+                end: pinWrapWidth
+            },
+            x: -horizontalScrollLength,
+            ease: "none"
+        });
+
+        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+        ScrollTrigger.refresh();
+    });
+}else if(document.documentElement.clientWidth < 992 && document.documentElement.clientWidth >= 768){
+    window.addEventListener("load", function () {
+        let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+        let pinWrap = document.querySelector(".pin-wrap");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        let horizontalScrollLength = pinWrapWidth - "564" ;
+
+        gsap.to(".pin-wrap", {
+            scrollTrigger: {
+                scroller: pageContainer,
+                scrub: true,
+                trigger: "#sectionPin",
+                pin: true,
+                start: "top top",
+                end: pinWrapWidth
+            },
+            x: -horizontalScrollLength,
+            ease: "none"
+        });
+
+        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+        ScrollTrigger.refresh();
+    });
+}else if(document.documentElement.clientWidth < 768 && document.documentElement.clientWidth >= 576){
+    window.addEventListener("load", function () {
+        let pinBoxes = document.querySelectorAll(".pin-wrap > *");
+        let pinWrap = document.querySelector(".pin-wrap");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        let horizontalScrollLength = pinWrapWidth - "332" ;
+
+        gsap.to(".pin-wrap", {
+            scrollTrigger: {
+                scroller: pageContainer,
+                scrub: true,
+                trigger: "#sectionPin",
+                pin: true,
+                start: "top top",
+                end: pinWrapWidth
+            },
+            x: -horizontalScrollLength,
+            ease: "none"
+        });
+
+        ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+
+        ScrollTrigger.refresh();
+    });
+}
 
 
 if (document.documentElement.clientWidth >= 576) {

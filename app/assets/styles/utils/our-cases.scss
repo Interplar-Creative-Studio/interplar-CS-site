@@ -71,7 +71,7 @@
     &__block{
       padding: 0 0 76px 0;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-start;
       &-unit{
         width: calc(50% - 32px);
       }
@@ -81,6 +81,10 @@
       }
       &-unit:not(:first-child){
         margin: 0;
+      }
+      &-unit:nth-child(3){
+        max-width: 128px;
+        margin: 0 0 0 auto;
       }
     }
   }
@@ -109,7 +113,7 @@
       }
       &-unit:nth-child(3){
         max-width: 128px;
-        margin: 0 0 auto 0;
+        margin: 0 0 auto 77px;
       }
     }
     &__mobile-button{
@@ -123,7 +127,6 @@
   .our-cases{
     padding: 200px 0 0 0;
     &__block{
-      justify-content: flex-end;
       &-unit:first-child{
         max-width: 488px;
         margin: 0 0 88px 0;
@@ -144,7 +147,6 @@
   .our-cases{
     padding: 0;
     &__block{
-      justify-content: flex-end;
       &-unit:first-child{
         max-width: 600px;
       }
