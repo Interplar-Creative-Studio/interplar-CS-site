@@ -47,7 +47,6 @@
       }
     }
   }
-
 }
 @media (min-width:576px){
 
@@ -108,7 +107,12 @@
 
   .cases-main{
     padding: 263px 0 0 0;
-
+    &__title{
+      h2{
+        font-size: 3.2rem;
+        line-height: 100%;
+      }
+    }
     &__block{
       padding: 355px 0 0 0;
       &-second{
@@ -128,7 +132,17 @@
 
   .cases-main{
     padding: 356px 0 0 0;
+    &__title{
+      &__second{
+        display: flex;
+        align-self: center;
+        h2{
+          font-size: 3.2rem;
+          line-height: 100%;
+        }
+      }
 
+    }
     &__block{
       padding: 424px 0 0 0;
       &-second{
