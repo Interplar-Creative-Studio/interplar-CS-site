@@ -219,7 +219,9 @@ h2{
   }
 }
 @media (min-width:992px){
-
+  h2{
+    font-size: 3.2rem;
+  }
   .header{
     padding: 100px 0 0 0;
     &__image{
