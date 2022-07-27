@@ -7,6 +7,11 @@ const menuLink = document.querySelectorAll('.menu-link')
 const backButton = document.querySelector('.back-button');
 const popUpButton = document.querySelector('.popUp__button');
 const popUp = document.querySelector('.popUp');
+const file = document.getElementById('file');
+const fileLabel = document.getElementById('file-label');
+file.addEventListener("change",function (e) {
+    fileLabel.innerHTML = this.files[0].name;
+});
 
 setTimeout(function() {
     preHeaderText.classList.add('pre-header__content-text-active');

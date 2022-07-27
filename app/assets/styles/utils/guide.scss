@@ -6,7 +6,7 @@
   height: 20px;
   left: 13px;
   top: 50%;
-  transform: rotate(90deg) translateY(-50%);
+  transform: rotate(-90deg) translateY(-50%);
   display: none;
   &__wrappe-img{
     width: 24px;
@@ -15,7 +15,7 @@
     flex-shrink: 0;
     img{
       display: block;
-      transform: rotate(-90deg);
+      transform: rotate(90deg);
       width: 100%;
       height: 100%;
     }
@@ -37,6 +37,7 @@
     text-transform: uppercase;
     font-family:'BebasNeue-Regular',sans-serif;
     letter-spacing: 0.1em;
+    align-self: center;
   }
   &__wrapper{
     position: absolute;
@@ -53,6 +54,7 @@
     width: 100%;
     white-space: nowrap;
     position: relative;
+    align-self: center;
     &:before{
       position: absolute;
       content: '';
@@ -71,6 +73,7 @@
     position: absolute;
     font-size: 3.2rem;
     width: 0;
+    margin: 0 8px 0 0;
   }
   .active{
     left: 60%;
@@ -85,6 +88,7 @@
       left: 0;
       position: relative;
       width: 100%;
+      font-size: 2.4rem;
     }
   }
 }
