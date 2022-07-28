@@ -182,6 +182,10 @@
     }
     &__desktop-title{
       max-width: 864px;
+      h2{
+        font-family: $montserrat200;
+        font-size: 5.6rem;
+      }
     }
     &__desktop-unit{
       display: flex;
@@ -191,13 +195,20 @@
       margin: 0 20px 0 0;
       &__number{
         border-right: 1px solid $white;
-        padding: 32px 100px 40px 100px;
+        padding: 32px 100px 0 100px;
         box-sizing: border-box;
+        h2{
+          font-family: $montserrat200;
+          font-size: 5.6rem;
+          padding: 0;
+        }
       }
       &__text{
         display: flex;
+        justify-content: space-around;
         padding: 32px 20px 40px 88px;
         box-sizing: border-box;
+        width: 100%;
         p:first-child{
           width: 181px;
           font-family: $montserrat400;
@@ -238,11 +249,17 @@
     }
     &__desktop-title{
       max-width: 1040px;
+      h2{
+        font-size: 6.4rem;
+      }
     }
     &__desktop-unit{
       width: 1120px;
       &__number{
-        padding: 40px 100px 40px 88px;
+        padding: 40px 100px 0 88px;
+        h2{
+          font-size: 6.4rem;
+        }
       }
       &__text{
         padding: 40px 30px 40px 170px;

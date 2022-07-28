@@ -2,6 +2,7 @@
   padding: 174px 0 44px 0;
   background: $black;
   .link{
+    font-family: $montserrat400;
     &:before{
       bottom: 0;
     }
@@ -39,18 +40,27 @@
     border: 2px solid $white;
     box-sizing: border-box;
     p:not(:first-child){
-      font-style: $montserrat300;
+      font-family: $montserrat300;
       margin: 13px 0 43px 0;
       max-width: 280px;
+    }
+    p:first-child{
+      font-family: $montserrat400;
     }
   }
   &__back{
     display: flex;
     flex-direction: column;
     padding: 58px 0 0 0;
+    p{
+      font-family: $montserrat400;
+    }
     .button-2{
       margin: 26px 0 0 0;
       cursor: pointer;
+      p{
+        font-family: 'BebasNeue-Regular', sans-serif;
+      }
     }
   }
 }

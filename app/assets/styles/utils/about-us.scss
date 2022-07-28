@@ -19,12 +19,16 @@
     margin: 31px 0 0 0;
   }
   h2{
-    font-family: $montserrat300;
+    font-family: $montserrat200;
   }
+
 }
 @media (min-width: 576px){
   .about-us{
     padding: 73px 0 0 0;
+    h2{
+      max-width: 232px;
+    }
     .mobile-line{
       width: 100vw;
     }
@@ -34,6 +38,9 @@
 
   .about-us{
     padding: 90px 0 0 0;
+    h2{
+      max-width: 269px;
+    }
   }
 
 }
@@ -41,6 +48,14 @@
 
   .about-us{
     padding: 110px 0 0 0;
+    h2{
+      max-width: 360px;
+      font-size: 5.6rem;
+    }
+    &__title{
+      max-width: 488px;
+      line-height: 3rem;
+    }
   }
 
 }
@@ -48,6 +63,14 @@
 
   .about-us{
     padding: 120px 0 0 0;
+    h2{
+      max-width: 424px;
+      font-size: 6.4rem;
+    }
+    &__title{
+      max-width: 617px;
+      line-height: 3rem;
+    }
   }
 
 }

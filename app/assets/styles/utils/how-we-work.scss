@@ -14,11 +14,12 @@
     }
     p:not(:last-child){
       padding: 36px 0 10px 0;
-      font-weight: 400;
       font-family: $montserrat400;
+      font-size: 1.4rem;
     }
     p:last-child{
       padding: 0 0 48px 0;
+      font-size: 1.4rem;
     }
   }
 }
@@ -50,9 +51,11 @@
     &__block-unit {
       p:not(:last-child) {
         padding: 34px 0 16px 0;
+        font-size: 1.6rem;
       }
       p:last-child {
         padding: 0 0 84px 0;
+        font-size: 1.6rem;
       }
     }
   }
@@ -68,9 +71,13 @@
     &__block-unit {
       p:not(:last-child) {
         padding: 53px 0 15px 0;
+        font-size: 3.2rem;
+        line-height: 100%;
       }
       p:last-child {
         padding: 0 0 50px 0;
+        font-size: 2.4rem;
+        line-height: 3rem;
       }
     }
   }

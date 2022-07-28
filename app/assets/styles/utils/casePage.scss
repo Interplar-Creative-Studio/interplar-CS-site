@@ -16,6 +16,9 @@ h2{
 
   &__information{
     padding: 50px 0 0 0;
+    p:first-child{
+      font-family: $montserrat400;
+    }
     p:not(:first-child){
       padding: 10px 0 0 0;
       font-family: $montserrat300;
@@ -23,9 +26,12 @@ h2{
   }
   &__task{
     padding: 200px 0 0 0;
+    h2{
+      font-family: $montserrat300;
+    }
     p{
       padding: 14px 0 0 0;
-      font-family: $montserrat200;
+      font-family: $montserrat300;
     }
   }
 }
@@ -46,15 +52,16 @@ h2{
   h1{
     font-size: 35.2rem;
     line-height: 100%;
-    font-family: $montserrat200;
+    font-family: $montserrat100;
   }
   &__description{
     h2{
       font-size: 1.4rem;
+      font-family: $montserrat400;
     }
     p{
       padding: 5px 0 0 0;
-      font-family: $montserrat200;
+      font-family: $montserrat300;
     }
   }
 }
@@ -68,11 +75,12 @@ h2{
   }
   &__description{
     padding: 60px 0 75px 0;
-    h2,p{
+    h2{
       font-family: $montserrat200;
     }
     p{
       padding: 15px 0 0 0;
+      font-family: $montserrat300;
     }
   }
 }
@@ -197,6 +205,10 @@ h2{
       padding: 82px 0 0 0;
     }
     &__description{
+      h2{
+        font-size: 1.6rem;
+        line-height: 100%;
+      }
       p{
         padding: 8px 0 0 0;
       }
@@ -206,6 +218,9 @@ h2{
     padding: 190px 0 0 0;
     &__description{
       padding: 72px 0;
+      h2{
+        max-width: 200px;
+      }
     }
   }
   .task-slider{
@@ -231,11 +246,29 @@ h2{
   }
   .description{
     padding: 256px 0 0 0;
+    &__titel{
+      h2{
+        font-size: 5.6rem;
+        max-width: 928px;
+      }
+    }
     &__information{
       padding: 100px 0 0 0;
+      p{
+        font-size: 3.2rem;
+      }
+      p:first-child{
+        padding: 0 0 20px 0;
+      }
     }
     &__task{
       padding: 300px 0 0 0;
+      h2{
+        font-size: 5.6rem;
+      }
+      p{
+        line-height: 3rem;
+      }
     }
   }
   .facts{
@@ -250,8 +283,12 @@ h2{
       padding: 77px 0 0 0;
     }
     &__description{
+      h2{
+        font-size: 3.2rem;
+      }
       p{
-        padding: 5px 0 0 0;
+        font-size: 2.4rem;
+        padding: 10px 0 0 0;
       }
     }
   }
@@ -259,6 +296,23 @@ h2{
     padding: 250px 0 0 0;
     &__description{
       padding: 100px 0;
+      h2{
+        max-width: 272px;
+        font-size: 5.6rem;
+        line-height: 100%;
+      }
+      p{
+        line-height: 3rem;
+      }
+    }
+  }
+  .task-solution,.facts{
+    h2{
+      font-size: 5.6rem;
+      line-height: 100%;
+    }
+    p{
+      line-height: 3rem;
     }
   }
   .task-slider{
@@ -282,8 +336,17 @@ h2{
   }
   .description{
     padding: 321px 0 0 0;
+    &__titel{
+      h2{
+        font-size: 6.4rem;
+        max-width: 100%;
+      }
+    }
     &__task{
       padding: 330px 0 0 0;
+      h2{
+        font-size: 6.4rem;
+      }
     }
   }
   .facts{
@@ -302,14 +365,20 @@ h2{
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      p{
-        padding: 0;
-      }
+    }
+  }
+  .task-solution,.facts{
+    h2{
+      font-size: 6.4rem;
     }
   }
   .result{
     &__description{
       padding: 95px 0;
+      h2{
+        max-width: 336px;
+        font-size: 6.4rem;
+      }
     }
   }
   .task-slider{

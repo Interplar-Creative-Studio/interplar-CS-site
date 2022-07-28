@@ -15,6 +15,9 @@
     flex-direction: column;
     h2{
       color: $black;
+      font-family: $montserrat400;
+      font-size: 2.4rem;
+      line-height: 100%;
     }
     input,textarea{
       display: block;
@@ -24,9 +27,13 @@
       width: 100%;
       font-family: $montserrat300;
       font-size: 1.4rem;
+      line-height: 100%;
+      max-width: 328px;
       &::placeholder{
         font-family: $montserrat300;
         font-size: 1.4rem;
+        line-height: 100%;
+        color:$black;
       }
     }
     &-information{
@@ -155,6 +162,12 @@
       h2{
         font-size: 1.6rem;
       }
+      input,textarea{
+        font-size: 1.6rem;
+        &::placeholder{
+          font-size: 1.6rem;
+        }
+      }
       &-information{
         h2{
           padding: 0 0 14px 0;
@@ -170,6 +183,7 @@
         padding: 26px 0 0 0;
         label{
           margin: 14px 0 0 0;
+          font-size: 1.6rem;
         }
       }
       &-button{
@@ -189,9 +203,13 @@
       h2{
         font-size: 3.2rem;
       }
-      input,textarea{
+      input, textarea {
         padding: 12px 22px;
         max-width: 400px;
+        font-size: 2.4rem;
+        &::placeholder {
+          font-size: 2.4rem;
+        }
       }
       &-information{
         h2{
@@ -208,8 +226,10 @@
         padding: 30px 0 0 0;
         label{
           margin: 17px 0 0 0;
-          max-width: 512px;
-          padding: 12px 0 12px 21px;
+          max-width: 400px;
+          padding: 12px 0 15px 21px;
+          font-size: 2.4rem;
+          line-height: 2.4rem;
         }
       }
       &-button{
@@ -240,6 +260,11 @@
           padding: 0 0 0 16px;
         }
       }
+      &-file{
+        label{
+          max-width: 512px;
+        }
+      }
     }
   }
 
@@ -268,6 +293,7 @@
         padding: 37px 0 0 0;
         label{
           margin: 32px 0 0 0;
+          font-size: 2.4rem;
         }
       }
       &-button{
@@ -276,4 +302,18 @@
     }
   }
 
+}
+@media (min-width: 1400px){
+  .feedback{
+    &__form{
+      input,textarea{
+        max-width: 666px;
+      }
+      &-file{
+        label{
+          max-width: 666px;
+        }
+      }
+    }
+  }
 }

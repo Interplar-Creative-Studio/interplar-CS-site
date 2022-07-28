@@ -27,7 +27,7 @@
         }
       }
       span{
-        font-family:'Montserrat',sans-serif;
+        font-family: $montserrat300;
         color: $white;
         font-size: 1.6rem;
         margin: 20px 0 0 0;
@@ -74,6 +74,11 @@
       justify-content: flex-start;
       &-unit{
         width: calc(50% - 32px);
+        span{
+          font-size: 1.4rem;
+          margin: 17px 0 0 0;
+          line-height: 100%;
+        }
       }
       &-unit:first-child{
         width: 100%;
@@ -102,6 +107,12 @@
     }
     &__block{
       padding: 0;
+      &-unit{
+        span{
+          font-size: 1.6rem;
+          margin: 24px 0 0 0;
+        }
+      }
       &-unit:first-child{
         width: 100%;
         margin: 0 0 63px 0;
@@ -127,6 +138,11 @@
   .our-cases{
     padding: 200px 0 0 0;
     &__block{
+      &-unit{
+        span{
+          font-size: 2.4rem;
+        }
+      }
       &-unit:first-child{
         max-width: 488px;
         margin: 0 0 88px 0;
