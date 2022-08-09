@@ -168,6 +168,27 @@
     }
   }
 }
+@media (min-width:1200px){
+  .pre-header {
+    &__content {
+      &-text {
+        h1 {
+          &:after{
+            position: absolute;
+            top: auto;
+            bottom: 13px;
+            right: 0;
+            margin: 0;
+            left: 302px;
+          }
+        }
+        h2 {
+          left: 302px;
+        }
+      }
+    }
+  }
+}
 @media (min-width:1240px){
   .pre-header {
     &__content {
@@ -186,11 +207,6 @@
           line-height: 8.8rem;
           position: relative;
           &:after{
-            position: absolute;
-            top: auto;
-            bottom: 13px;
-            right: 0;
-            margin: 0;
             left: 290px;
           }
         }

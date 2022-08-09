@@ -27,7 +27,7 @@ h2{
   &__task{
     padding: 200px 0 0 0;
     h2{
-      font-family: $montserrat300;
+      font-family: $montserrat200;
     }
     p{
       padding: 14px 0 0 0;
@@ -44,7 +44,7 @@ h2{
 .task-solution,.facts{
   padding: 147px 0 0 0;
   p{
-    font-family: $montserrat200;
+    font-family: $montserrat300;
     padding: 17px 0 0 0;
   }
 }
@@ -259,6 +259,9 @@ h2{
       }
       p:first-child{
         padding: 0 0 20px 0;
+      }
+      p:not(:first-child){
+        font-size: 2.4rem;
       }
     }
     &__task{

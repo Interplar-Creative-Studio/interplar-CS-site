@@ -82,9 +82,11 @@
     transition: $animation;
     z-index: 2;
     .menu-link{
+      font-family: $montserrat400;
       text-decoration: none;
       color: $black;
     }
+
     .link{
       color: $black;
       font-weight: 400;
@@ -100,6 +102,12 @@
     }
     .link:nth-child(5){
       margin: auto 0 0 0;
+    }
+    .email-link{
+      font-family: $montserrat400;
+    }
+    .sublink{
+      font-family: $montserrat300;
     }
     ul{
       padding:16px 0;
@@ -258,6 +266,9 @@
           font-size: 2.4rem;
           line-height: 2.9rem;
         }
+      }
+      a:last-child{
+        font-size: 2.4rem;
       }
     }
   }
