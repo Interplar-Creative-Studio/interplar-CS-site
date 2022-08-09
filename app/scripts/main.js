@@ -15,13 +15,13 @@ file.addEventListener("change",function (e) {
 
 setTimeout(function() {
     preHeaderText.classList.add('pre-header__content-text-active');
-}, 2000);
+}, 1);
 setTimeout(function() {
     preHeader.classList.add('pre-header-hide');
-}, 4000);
+}, 1);
 setTimeout(function() {
     preHeader.style.display = "none";
-}, 5000);
+}, 1);
 
 menuBurger.addEventListener('click',() =>{
     menu.classList.toggle('menu-active');
