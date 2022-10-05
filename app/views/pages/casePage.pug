@@ -16,7 +16,7 @@ block content
                 img(
                     src="assets/img/logo.svg"
                 )
-            p.guide__current-title belleyou
+            p.guide__current-title КХЧ Пром
     #scroller-wrapper
         section#header.header(
             data-scroll
@@ -26,36 +26,54 @@ block content
                 .row.header__title.justify-content-between
                     .col-6.col-sm-5.col-md-5.col-lg-5.col-xl-5
                         h1(
-                            data-title='BELLEYOU'
-                        ) BELLEYOU
-                    .d-flex.col-5.col-sm-7.col-md-7.col-lg-7.col-xl-7
+                            data-title='КХЧ Пром'
+                        ) КХЧ Пром
+                    .d-flex.col-6.col-sm-7.col-md-7.col-lg-7.col-xl-7
                         h2 веб-разработка
                 .row
                     .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
                         .header__image
-                            img(
-                                src="assets/img/case-page.png"
-                            )
+                            picture
+                                source(
+                                    media='(min-width: 600px)',
+                                    srcset="assets/img/logo-desk.png"
+                                )
+                                img(
+                                    src="assets/img/logo-mobile.png"
+                                )
         section#description.description
             .container
                 .row
                     .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
                         .description__titel
-                            h2 доработка и развитие сайта для западной аудитории
+                            h2 интернет-магазин промышленного холодильного оборудования
                 .row.description__information
                     .d-none.d-sm-block.col-sm-5.col-md-5.col-lg-5.col-xl-5
                     .d-flex.flex-column.col-3.col-sm-3.col-md-3.col-lg-3.col-xl-3
                         p /клиент/
-                        p Belleyou
+                        p КХЧ Пром
                     .d-flex.flex-column.col-4.col-sm-4.col-md-4.col-lg-44.col-xl-4
                         p /студия/
                         p INTERPLAR
+                .row.description__task
+                    .d-none.d-sm-block.col-sm-5.col-md-5.col-lg-5.col-xl-5
+                    .d-flex.flex-column.col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
+                        p КХЧ Пром - компания, занимающаяся производством специальных холодильных установок для промышленности и сельского хозяйства. Осуществляет поставку полного спектра холодильных компонентов, монтаж и сервисное обслуживание. КХЧ давно на рынке, имеет большой опыт работы в сфере и высокие квалификации. Старый сайт и его функционал перестали соответствовать настоящему уровню компании.
                 .row.description__task
                     .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-4
                         h2 задача проекта:
                     .d-none.d-xl-block.col-xl-1
                     .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
-                        p в силу трудностей работы с Shopify, на котором до этого функционировал сайт, заказчику требовалось срочно перенести магазин на платформу Wordpress.
+                        p создать новый сайт, перенести базу товаров со старого сайта и запустить продажи с дополнительными интеграциями.
+        section#task-solution.task-solution
+            .container
+                .row.task-solution__description
+                    .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5
+                        h2 решение задачи:
+                    .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
+                        p для сайта КХЧ Пром мы полностью переработали дизайн в соответствии с новым фирменным стилем компании. Был выбран простой и современный деловой стиль.
+                            br
+                            | Так как это интернет-магазин, мы позаботились об удобстве для пользователей: создали понятные каталоги и навигацию. Проект реализовали на wordpress с использованием плагина woocommerce.
 
         section#scroller-mobile.scroller-mobile.d-block.d-sm-none
             .container
@@ -63,46 +81,48 @@ block content
                     .col-12
                         .scroller-mobile__image
                             img(
-                                src="assets/img/case.png"
+                                src="assets/img/case-img1.png"
                             )
                     .col-12
                         .scroller-mobile__image
                             img(
-                                src="assets/img/case.png"
+                                src="assets/img/case-img2.png"
                             )
                     .col-12
                         .scroller-mobile__image
                             img(
-                                src="assets/img/case.png"
+                                src="assets/img/case-img3.png"
+                            )
+                    .col-12
+                        .scroller-mobile__image
+                            img(
+                                src="assets/img/case-img4.png"
                             )
         .container.d-none.d-sm-block.task-slider
             section#sectionPin
                 .pin-wrap
                     picture.task-img
                         img(
-                            src="assets/img/case.png"
+                            src="assets/img/case-img1.png"
                         )
                     picture.task-img
                         img(
-                            src="assets/img/case.png"
+                            src="assets/img/case-img2.png"
                         )
                     picture.task-img
                         img(
-                            src="assets/img/case.png"
+                            src="assets/img/case-img3.png"
                         )
                     picture.task-img
                         img(
-                            src="assets/img/case.png"
+                            src="assets/img/case-img4.png"
                         )
-        section#task-solution.task-solution
-            .container
-                .row
-                    .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5
-                        h2 решение задачи:
-                    .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
-                        p оперативно разработали план переноса магазина, подключения его к складу в европе и отладки процесса покупки, и приступили к его выполнению. Помимо самого магазина перенесли также данные всех зарегистрированных пользователей. После завершения основной части работ и успешной проверки работоспособности всех систем предложили заказчику идеи по доработке и развитию продукта.
         section#facts.facts
             .container
+                .row.solution
+                    .d-none.d-sm-block.col-sm-5.col-md-5.col-lg-5.col-xl-5
+                    .d-flex.flex-column.col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
+                        p основной задачей был перенос существующих товаров из устаревшей системы управления содержимым (рукописной cms) в более структурированный вид в wordpress. Также заметили и исправили проблему неорганизованности прайс-листов, отсутствие порядка сильно осложняло работу менеджеров.Для переноса и упорядочивания мы написали специальный скрипт, который делает это автоматически, а для менеджеров сайта реализовали функционал составления прайс-листа и его структуризации с последующей загрузкой в систему. Таким образом оптимизировали процесс и снизили вероятность ошибок.
                 .row
                     .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5
                         h2 факты о проекте:
@@ -111,23 +131,23 @@ block content
         section#terms.terms
             .container
                 .row
-                    .d-none.d-sm-block.col-sm-5.col-md-5.col-lg-5.col-xl-5
-                    .d-flex.col-12.col-sm-3.col-md-3.col-lg-3.col-xl-3
+                    .d-none.d-sm-block.col-sm-4.col-md-4.col-lg-4.col-xl-4
+                    .d-flex.col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.terms__task__long
                         h1(
-                            data-title='1'
-                        ) 1
+                            data-title='2'
+                        ) 2
                     .col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.terms__description
-                        h2 месяц
-                        p на перенос магазина на новую платформу без потери данных
+                        h2 недели затрачено на работу
+                        p
                 .row.terms__task
-                    .d-none.d-sm-block.col-sm-5.col-md-5.col-lg-5.col-xl-5
-                    .d-flex.col-12.col-sm-3.col-md-3.col-lg-3.col-xl-3
+                    .d-none.d-sm-block.col-sm-4.col-md-4.col-lg-4.col-xl-4
+                    .d-flex.col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.terms__task__long
                         h1(
-                            data-title='3'
-                        ) 3
+                            data-title='4к+'
+                        ) 4к+
                     .col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.terms__description
-                        h2 задачи
-                        p выполнены в дополнение к основным, которые повысили качество
+                        h2 товаров перенесено
+                        p
         section#result.result
             .container
                 .row
@@ -137,7 +157,7 @@ block content
                     .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5
                         h2 итоги работы:
                     .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
-                        p за один месяц мы перенесли магазин на новую платформу без потери данных зарегистрированных пользователей и полностью настроили его работу. Проявили инициативу и дополнительно к основной задаче доработали продукт, создали интеграцию в Telegram. По итогу команда получила качественный продукт и положительный отзыв от клиента.
+                        p мы старались принести заказчику максимум пользы и предложили улучшения основанные на собственном опыте, скорректировали задачи и запросы. Обновили бизнес для соответствия современным реалиям, оптимизировали и автоматизировали процессы, помогли наладить продажи.
                 .row
                     .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
                         hr

@@ -6,6 +6,7 @@ const static = require('./static');
 const scss2css = require('./scss2css');
 const scripts = require('./scripts');
 const pug2html = require('./pug2html');
+const libs = require('./libs');
 
 const server = require('browser-sync').create();
 
@@ -31,6 +32,7 @@ module.exports = function serve(cb) {
 	);
 	watch('app/scripts/**/*.js', series(scripts, readyReload));
 	watch('app/views/**/*.pug', series(pug2html, readyReload));
+	watch('app/assets/libs/*.js', series(scripts, readyReload));
 
 	return cb();
 };

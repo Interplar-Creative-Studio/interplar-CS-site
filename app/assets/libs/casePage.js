@@ -160,7 +160,7 @@ if (document.documentElement.clientWidth >= 576) {
     scroller.on('scroll', (args) => {
         if (typeof args.currentElements['header'] === 'object') {
             if (args.currentElements['header'].progress >= 0) {
-                guideCurrentTitle.innerHTML = 'belleyou';
+                guideCurrentTitle.innerHTML = 'КХЧ Пром';
             } else {
                 guideCurrentTitle.innerHTML = 'Ваш проект';
             }
@@ -169,7 +169,7 @@ if (document.documentElement.clientWidth >= 576) {
                 guideCurrentTitle.innerHTML = 'Ваш проект';
                 guideWrapper.classList.remove('active');
             } else {
-                guideCurrentTitle.innerHTML = 'belleyou';
+                guideCurrentTitle.innerHTML = 'КХЧ Пром';
             }
         } else if (typeof args.currentElements['contacts'] === 'object') {
             if (args.currentElements['contacts'].progress > 0.1) {
