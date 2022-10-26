@@ -16,7 +16,7 @@ block content
                 img(
                     src="assets/img/logo.svg"
                 )
-            p.guide__current-title КХЧ Пром
+            p.guide__current-title Market 3D Planner
     #scroller-wrapper
         section#header.header(
             data-scroll
@@ -26,128 +26,91 @@ block content
                 .row.header__title.justify-content-between
                     .col-6.col-sm-5.col-md-5.col-lg-5.col-xl-5
                         h1(
-                            data-title='КХЧ Пром'
-                        ) КХЧ Пром
+                            data-title='Market 3D Planner'
+                        ) Market 3D Planner
                     .d-flex.col-6.col-sm-7.col-md-7.col-lg-7.col-xl-7
-                        h2 веб-разработка
+                        h2 разработка MVP для стартапа
                 .row
                     .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
                         .header__image
                             picture
                                 source(
                                     media='(min-width: 600px)',
-                                    srcset="assets/img/logo-desk.png"
+                                    srcset="assets/img/3d-logo-desk.png"
                                 )
                                 img(
-                                    src="assets/img/logo-mobile.png"
+                                    src="assets/img/3d-logo-mobile.png"
                                 )
         section#description.description
             .container
                 .row
                     .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
                         .description__titel
-                            h2 интернет-магазин промышленного холодильного оборудования
+                            h2 разработка MVP для стартапа
                 .row.description__information
                     .d-none.d-sm-block.col-sm-5.col-md-5.col-lg-5.col-xl-5
                     .d-flex.flex-column.col-3.col-sm-3.col-md-3.col-lg-3.col-xl-3
                         p /клиент/
-                        p КХЧ Пром
+                        p Market 3D Planner
                     .d-flex.flex-column.col-4.col-sm-4.col-md-4.col-lg-44.col-xl-4
                         p /студия/
                         p INTERPLAR
-                .row.description__task
+                //- .row.description__task
                     .d-none.d-sm-block.col-sm-5.col-md-5.col-lg-5.col-xl-5
                     .d-flex.flex-column.col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
-                        p КХЧ Пром - компания, занимающаяся производством специальных холодильных установок для промышленности и сельского хозяйства. Осуществляет поставку полного спектра холодильных компонентов, монтаж и сервисное обслуживание. КХЧ давно на рынке, имеет большой опыт работы в сфере и высокие квалификации. Старый сайт и его функционал перестали соответствовать настоящему уровню компании.
+                        p к нам обратился стартап из Казахстана в сфере продажи мебели. Идея состояла в применении 3D технологий для визуализации интерьеров прямо на сайте продажи мебели. Так клиенты могут сразу увидеть, как вещь будет смотреться в интерьере, и в один клик заказать всё необходимое. От нас требовалось создать основу для будущего продукта и его тестовую версию для презентации потенциальным инвесторам.
                 .row.description__task
                     .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-4
                         h2 задача проекта:
                     .d-none.d-xl-block.col-xl-1
                     .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
-                        p создать новый сайт, перенести базу товаров со старого сайта и запустить продажи с дополнительными интеграциями.
+                        p заказчик поставил нетривиальную задачу — разработать MVP 3D редактора на сайте.
+                        br
+                        br
+                        p к нам обратился стартап из Казахстана в сфере продажи мебели. Идея состояла в применении 3D технологий для визуализации интерьеров прямо на сайте продажи мебели. Так клиенты могут сразу увидеть, как вещь будет смотреться в интерьере, и в один клик заказать всё необходимое. От нас требовалось создать основу для будущего продукта и его тестовую версию для презентации потенциальным инвесторам.
         section#task-solution.task-solution
             .container
                 .row.task-solution__description
                     .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5
                         h2 решение задачи:
                     .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
-                        p для сайта КХЧ Пром мы полностью переработали дизайн в соответствии с новым фирменным стилем компании. Был выбран простой и современный деловой стиль.
+                        p прежде всего мы  реализовали библиотеку, которая позволила корректно управлять 3D редактором через интерфейс (vue js). Разработали многоуровневую архитектуру, чтобы можно было легко отделить фасад от остальной части библиотеки. 
                             br
-                            | Так как это интернет-магазин, мы позаботились об удобстве для пользователей: создали понятные каталоги и навигацию. Проект реализовали на wordpress с использованием плагина woocommerce.
-
+                            | Вторым этапом интегрировали нашу собственную библиотеку во фронтэнд, чтобы у разработчиков была возможность настроить пользовательские интерфейсы. 
+                            br
+                            | Третий этап – 3D модели. Определив подходящий формат, мы разработали собственный пайплайн создания оптимизированных 3D моделей, подходящих под наши задачи.
+                            br
+                            | Стек технологий: Three.js, pixi.js, vue.js, pug, scss, Blender
         section#scroller-mobile.scroller-mobile.d-block.d-sm-none
             .container
                 .row
                     .col-12
                         .scroller-mobile__image
+                            iframe(src="https://vk.com/video_ext.php?oid=216176098&id=456239528&hash=46d7b06dca200cfe&hd=2" width="100%" height="100%" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen)
+                    .col-12
+                        .scroller-mobile__image
+                            iframe(src="https://vk.com/video_ext.php?oid=216176098&id=456239527&hash=529838120b82dea0&hd=2" width="100%" height="100%" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen)
+                    .col-12
+                        .scroller-mobile__image
                             img(
-                                src="assets/img/case-img1.png"
+                                src="assets/img/3d-logo-mobile.png"
                             )
                     .col-12
                         .scroller-mobile__image
                             img(
-                                src="assets/img/case-img2.png"
-                            )
-                    .col-12
-                        .scroller-mobile__image
-                            img(
-                                src="assets/img/case-img3.png"
-                            )
-                    .col-12
-                        .scroller-mobile__image
-                            img(
-                                src="assets/img/case-img4.png"
+                                src="assets/img/3d-logo-mobile.png"
                             )
         .container.d-none.d-sm-block.task-slider
             section#sectionPin
                 .pin-wrap
                     picture.task-img
-                        img(
-                            src="assets/img/case-img1.png"
-                        )
+                        iframe(src="https://vk.com/video_ext.php?oid=216176098&id=456239528&hash=46d7b06dca200cfe&hd=2" width="100%" height="100%" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen)
                     picture.task-img
-                        img(
-                            src="assets/img/case-img2.png"
-                        )
+                        iframe(src="https://vk.com/video_ext.php?oid=216176098&id=456239527&hash=529838120b82dea0&hd=2" width="100%" height="100%" allow="autoplay; encrypted-media; fullscreen; picture-in-picture;" frameborder="0" allowfullscreen)
                     picture.task-img
-                        img(
-                            src="assets/img/case-img3.png"
-                        )
+                        img(src="assets/img/3d-logo-mobile.png")
                     picture.task-img
-                        img(
-                            src="assets/img/case-img4.png"
-                        )
-        section#facts.facts
-            .container
-                .row.solution
-                    .d-none.d-sm-block.col-sm-5.col-md-5.col-lg-5.col-xl-5
-                    .d-flex.flex-column.col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
-                        p основной задачей был перенос существующих товаров из устаревшей системы управления содержимым (рукописной cms) в более структурированный вид в wordpress. Также заметили и исправили проблему неорганизованности прайс-листов, отсутствие порядка сильно осложняло работу менеджеров.Для переноса и упорядочивания мы написали специальный скрипт, который делает это автоматически, а для менеджеров сайта реализовали функционал составления прайс-листа и его структуризации с последующей загрузкой в систему. Таким образом оптимизировали процесс и снизили вероятность ошибок.
-                .row
-                    .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5
-                        h2 факты о проекте:
-                    .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
-                        p так в дополнение к основному фронту работ мы провели оценку сайта по соответствующим метрикам для повышения качества продукта и исправили выявленные недостатки. Ещё мы разработали интеграцию с Telegram-ботом, чтобы любой пользователь мог хранить магазин прямо у себя в мессенджере.
-        section#terms.terms
-            .container
-                .row
-                    .d-none.d-sm-block.col-sm-4.col-md-4.col-lg-4.col-xl-4
-                    .d-flex.col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.terms__task__long
-                        h1(
-                            data-title='2'
-                        ) 2
-                    .col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.terms__description
-                        h2 недели затрачено на работу
-                        p
-                .row.terms__task
-                    .d-none.d-sm-block.col-sm-4.col-md-4.col-lg-4.col-xl-4
-                    .d-flex.col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.terms__task__long
-                        h1(
-                            data-title='4к+'
-                        ) 4к+
-                    .col-12.col-sm-4.col-md-4.col-lg-4.col-xl-4.terms__description
-                        h2 товаров перенесено
-                        p
+                        img(src="assets/img/3d-logo-mobile.png")
         section#result.result
             .container
                 .row
@@ -157,7 +120,7 @@ block content
                     .col-12.col-sm-5.col-md-5.col-lg-5.col-xl-5
                         h2 итоги работы:
                     .col-12.col-sm-7.col-md-7.col-lg-7.col-xl-7
-                        p мы старались принести заказчику максимум пользы и предложили улучшения основанные на собственном опыте, скорректировали задачи и запросы. Обновили бизнес для соответствия современным реалиям, оптимизировали и автоматизировали процессы, помогли наладить продажи.
+                        p наша команда разработала уникальную библиотеку для работы с 3D в вебе. Эта библиотека стала оберткой для Pixijs и Three js. Благодаря продуманной архитектуре, решение получилось очень удобным. Мы реализовали чертёжное (2D) и 3D отображение на двух библиотеках соответственно. Создали пайплайн разработки 3D моделей, пригодных для использования на сайтах. Получили невероятно интересный опыт и уникальный проект.
                 .row
                     .col-12.col-sm-12.col-md-12.col-lg-12.col-xl-12
                         hr
