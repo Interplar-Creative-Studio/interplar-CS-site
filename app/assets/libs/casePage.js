@@ -45,7 +45,7 @@ if (document.documentElement.clientWidth < 1400 && document.documentElement.clie
                 trigger: "#sectionPin",
                 pin: true,
                 start: "top top",
-                end: pinWrapWidth
+                end: "2000"
             },
             x: -horizontalScrollLength,
             ease: "none"
@@ -70,7 +70,7 @@ if (document.documentElement.clientWidth < 1400 && document.documentElement.clie
                 trigger: "#sectionPin",
                 pin: true,
                 start: "top top",
-                end: pinWrapWidth
+                end: "2000"
             },
             x: -horizontalScrollLength,
             ease: "none"
@@ -95,7 +95,7 @@ if (document.documentElement.clientWidth < 1400 && document.documentElement.clie
                 trigger: "#sectionPin",
                 pin: true,
                 start: "top top",
-                end: pinWrapWidth
+                end: "2000"
             },
             x: -horizontalScrollLength,
             ease: "none"
@@ -119,7 +119,7 @@ if (document.documentElement.clientWidth < 1400 && document.documentElement.clie
                 trigger: "#sectionPin",
                 pin: true,
                 start: "top top",
-                end: pinWrapWidth
+                end: "2000"
             },
             x: -horizontalScrollLength,
             ease: "none"
@@ -143,7 +143,7 @@ if (document.documentElement.clientWidth < 1400 && document.documentElement.clie
                 trigger: "#sectionPin",
                 pin: true,
                 start: "top top",
-                end: pinWrapWidth
+                end: "2000"
             },
             x: -horizontalScrollLength,
             ease: "none"
